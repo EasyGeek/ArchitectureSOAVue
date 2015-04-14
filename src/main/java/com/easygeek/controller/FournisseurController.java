@@ -15,15 +15,16 @@ public class FournisseurController {
 	public ModelAndView mav = new ModelAndView();
 
 	@RequestMapping(value = "/fournisseurs", method = RequestMethod.GET)
-	public ModelAndView getAll() {
+	public ModelAndView getFournisseurs() {
 		mav.setViewName("fournisseurs");
 
-		RestTemplate restTemplate2 = new RestTemplate();
-//		ResponseEntity<Fournisseur[]> responseEntity = restTemplate2
-//				.getForEntity("http://localhost:8081/fournisseur",
-//						Fournisseur[].class);
-//
-//		mav.addObject("fournisseurList", responseEntity.getBody());
+		RestTemplate restTemplate = new RestTemplate();
+		ResponseEntity<Fournisseur[]> responseEntity = restTemplate
+				.getForEntity("http://localhost:8090/fournisseur",
+						Fournisseur[].class);
+
+		mav.addObject("command", new Fournisseur());
+		mav.addObject("fournisseurList", responseEntity.getBody());
 
 		return mav;
 	}

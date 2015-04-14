@@ -3,11 +3,33 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
 
-<html>
 <head></head>
 <body>
-	<div class="col-md-9 content">
+	<div>
+		<form:form action="http://localhost:8090/fournisseur/ajouter"
+			method="POST">
+			<p>
+				<form:input path="nom" placeholder="Nom" />
+			</p>
+			<p>
+				<form:input path="telephone" placeholder="Téléphone" />
+			</p>
+			<p>
+				<form:input path="adresse" placeholder="Adresse" />
+			</p>
+			<p>
+				<form:input path="codePostal" placeholder="Code postal" />
+			</p>
+			<p>
+				<form:input path="ville" placeholder="Ville" />
+			</p>
+			<input type="submit" value="Ajouter" />
+		</form:form>
+	</div>
+	<div>
 		<h2>Liste des fournisseurs</h2>
 		<table class="table table-condensed table-bordered">
 			<tr id="tableTitle">
@@ -20,8 +42,6 @@
 					<td><c:out value="${f.adresse}" /></td>
 				</tr>
 			</c:forEach>
-			
-			hello
 		</table>
 	</div>
 
