@@ -20,9 +20,9 @@ public class ClientController {
 
 		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<Client[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8090/client",
+				.getForEntity("http://localhost:8081/client",
 						Client[].class);
-
+		
 		mav.addObject("command", new Client());
 		mav.addObject("clientList", responseEntity.getBody());
 

@@ -40,22 +40,22 @@
 <table class="table table-condensed table-bordered">
 	<tr id="tableTitle">
 		<td>Nom</td>
-		<td>Prénom</td>
+		<!-- <td>Prénom</td>
 		<td>Email</td>
 		<td>Téléphone</td>
 		<td>Adresse</td>
 		<td>Ville</td>
-		<td>Code postal</td>
+		<td>Code postal</td> -->
 	</tr>
-	<c:forEach var="nomVariable" items="${fournisseurList}">
+	<c:forEach var="nomVariable" items="${clientList}">
 		<tr>
 			<td><c:out value="${nomVariable.nom}" /></td>
-			<td><c:out value="${nomVariable.prenom}" /></td>
+			<%-- <td><c:out value="${nomVariable.prenom}" /></td>
 			<td><c:out value="${nomVariable.email}" /></td>
 			<td><c:out value="${nomVariable.telephone}" /></td>
 			<td><c:out value="${nomVariable.adresse}" /></td>
 			<td><c:out value="${nomVariable.ville}" /></td>
-			<td><c:out value="${nomVariable.codePostal}" /></td>
+			<td><c:out value="${nomVariable.codePostal}" /></td> --%>
 			<td></td>
 		</tr>
 	</c:forEach>
