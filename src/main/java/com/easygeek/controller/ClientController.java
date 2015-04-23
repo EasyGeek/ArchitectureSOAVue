@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.easygeek.entite.Client;
 
 @Controller
 public class ClientController {
@@ -14,7 +15,7 @@ public class ClientController {
 	public ModelAndView mav = new ModelAndView();
 
 	@RequestMapping(value = "/clients", method = RequestMethod.GET)
-	public <Client> ModelAndView getClients() {
+	public ModelAndView getClients() {
 		mav.setViewName("clients");
 
 		RestTemplate restTemplate = new RestTemplate();

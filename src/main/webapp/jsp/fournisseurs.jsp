@@ -43,7 +43,7 @@
 			<td><c:out value="${nomVariable.adresse}" /></td>
 			<td><c:out value="${nomVariable.ville}" /></td>
 			<td><c:out value="${nomVariable.codePostal}" /></td>
-			<td><
+			<td></td>
 		</tr>
 	</c:forEach>
 </table>

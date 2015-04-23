@@ -1,10 +1,5 @@
 package com.easygeek.entite;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 public class Client implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -17,8 +12,6 @@ public class Client implements java.io.Serializable {
 	private String ville;
 	private String email;
 	private String password;
-	@JsonManagedReference
-	private Set<Commande> commandes = new HashSet<Commande>(0);
 
 	public Client() {
 	}
@@ -29,8 +22,7 @@ public class Client implements java.io.Serializable {
 	}
 
 	public Client(String nom, String prenom, String telephone, String adresse,
-			String codePostal, String ville, String email, String password,
-			Set<Commande> commandes) {
+			String codePostal, String ville, String email, String password) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.telephone = telephone;
@@ -39,7 +31,6 @@ public class Client implements java.io.Serializable {
 		this.ville = ville;
 		this.email = email;
 		this.password = password;
-		this.commandes = commandes;
 	}
 
 	
@@ -113,14 +104,6 @@ public class Client implements java.io.Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	
-	public Set<Commande> getCommandes() {
-		return this.commandes;
-	}
-
-	public void setCommandes(Set<Commande> commandes) {
-		this.commandes = commandes;
 	}
 
 }

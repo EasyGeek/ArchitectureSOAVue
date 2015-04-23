@@ -9,4 +9,3 @@
 	<link rel="stylesheet" href="http://localhost:8080/ArchitectureSOAVue/css/style.css">
 </head>
 <body>
-	<div>
