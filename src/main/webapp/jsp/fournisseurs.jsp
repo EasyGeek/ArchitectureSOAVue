@@ -5,8 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <jsp:include page="layout/header.jsp"></jsp:include>
-<form:form action="http://localhost:8090/fournisseur/ajouter"
-	method="POST">
+<form:form action="http://localhost:8090/fournisseur/ajouter" method="POST">
 	<p>
 		<form:input path="nom" placeholder="Nom" />
 	</p>
@@ -44,6 +43,7 @@
 			<td><c:out value="${nomVariable.adresse}" /></td>
 			<td><c:out value="${nomVariable.ville}" /></td>
 			<td><c:out value="${nomVariable.codePostal}" /></td>
+			<td><
 		</tr>
 	</c:forEach>
 </table>

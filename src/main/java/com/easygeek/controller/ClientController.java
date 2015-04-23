@@ -7,26 +7,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.easygeek.entite.Fournisseur;
 
 @Controller
-public class FournisseurController {
+public class ClientController {
 
 	public ModelAndView mav = new ModelAndView();
 
-	@RequestMapping(value = "/fournisseurs", method = RequestMethod.GET)
-	public ModelAndView getFournisseurs() {
-		mav.setViewName("fournisseurs");
+	@RequestMapping(value = "/clients", method = RequestMethod.GET)
+	public <Client> ModelAndView getClients() {
+		mav.setViewName("clients");
 
 		RestTemplate restTemplate = new RestTemplate();
-		ResponseEntity<Fournisseur[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8090/fournisseurs",
-						Fournisseur[].class);
+		ResponseEntity<Client[]> responseEntity = restTemplate
+				.getForEntity("http://localhost:8090/client",
+						Client[].class);
 
-		mav.addObject("command", new Fournisseur());
-		mav.addObject("fournisseurList", responseEntity.getBody());
+		mav.addObject("command", new Client());
+		mav.addObject("clientList", responseEntity.getBody());
 
 		return mav;
 	}
-
 }
