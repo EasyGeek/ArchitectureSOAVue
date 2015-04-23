@@ -1,5 +1,9 @@
 package com.easygeek.entite;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class ComposantFournisseurId implements java.io.Serializable {
 
 

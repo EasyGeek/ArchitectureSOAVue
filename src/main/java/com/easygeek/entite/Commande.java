@@ -2,6 +2,9 @@ package com.easygeek.entite;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class Commande implements java.io.Serializable {
 

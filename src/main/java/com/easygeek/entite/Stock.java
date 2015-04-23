@@ -2,6 +2,10 @@ package com.easygeek.entite;
 
 import java.sql.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class Stock implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;

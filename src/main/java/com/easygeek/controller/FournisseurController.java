@@ -6,11 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.client.HttpClientErrorException;
 
 import com.easygeek.entite.Fournisseur;
 
-@SuppressWarnings("unused")
 @Controller
 public class FournisseurController {
 
