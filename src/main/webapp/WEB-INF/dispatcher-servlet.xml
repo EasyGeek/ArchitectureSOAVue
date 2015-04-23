@@ -18,6 +18,8 @@
     </bean>
     
     <context:component-scan base-package="com.easygeek" />
+    <context:component-scan base-package="com.easygeek.controller" />
+    <context:component-scan base-package="com.easygeek.dao" />
     
 	 <mvc:annotation-driven enable-matrix-variables="true"/>
 	 
