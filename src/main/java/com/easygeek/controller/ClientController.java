@@ -1,12 +1,12 @@
 package com.easygeek.controller;
 
-import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.easygeek.dao.ClientDao;
 import com.easygeek.entite.Client;
 
 @Controller
@@ -14,17 +14,15 @@ public class ClientController {
 
 	public ModelAndView mav = new ModelAndView();
 
+	@Autowired
+	ClientDao clientDao;
+	
 	@RequestMapping(value = "/clients", method = RequestMethod.GET)
 	public ModelAndView getClients() {
 		mav.setViewName("clients");
-
-		RestTemplate restTemplate = new RestTemplate();
-		ResponseEntity<Client[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8081/client",
-						Client[].class);
 		
 		mav.addObject("command", new Client());
-		mav.addObject("clientList", responseEntity.getBody());
+		mav.addObject("clientList", clientDao.getAll());
 
 		return mav;
 	}

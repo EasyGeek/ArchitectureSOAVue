@@ -3,10 +3,7 @@ package com.easygeek.entite;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-<<<<<<< HEAD
 
-=======
->>>>>>> 3fe339d59839c7e77ffad438f81bf6e2856d5b9b
 public class Fournisseur implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;

@@ -16,6 +16,8 @@
 		<td>Adresse</td>
 		<td>Ville</td>
 		<td>Code postal</td>
+		<td>Modifier</td>
+		<td>Supprimer</td>
 	</tr>
 	<c:forEach var="nomVariable" items="${clientList}">
 		<tr>
@@ -26,67 +28,27 @@
 			<td><c:out value="${nomVariable.adresse}" /></td>
 			<td><c:out value="${nomVariable.ville}" /></td>
 			<td><c:out value="${nomVariable.codePostal}" /></td>
-			<td></td>
+			<td><a href="" >Modifier</a>
+			<td><form:form action ="http://localhost:8090/client/supprimer" method="POST"></form:form></td>			
 		</tr>
 	</c:forEach>
 </table>
-
-<form:form action="http://localhost:8090/client/ajouter" method="POST">
-	<p>
-		<form:input path="nom" placeholder="Nom" />
-	</p>
-	<p>
-		<form:input path="prenom" placeholder="Prénom" />
-	</p>
-	<p>
-		<form:input path="password" placeholder="Password" />
-	</p>
-	<p>
-		<form:input path="email" placeholder="Email" />
-	</p>
-	<p>
-		<form:input path="telephone" placeholder="Téléphone" />
-	</p>
-	<p>
-		<form:input path="adresse" placeholder="Adresse" />
-	</p>
-	<p>
-		<form:input path="codePostal" placeholder="Code postal" />
-	</p>
-	<p>
-		<form:input path="ville" placeholder="Ville" />
-	</p>
-	<input type="submit" value="Ajouter" />
-</form:form>
-
 <br />
-<br />
-<<<<<<< HEAD
-=======
 
-<h2>Liste des clients</h2>
-<table class="table table-condensed table-bordered">
-	<tr id="tableTitle">
-		<td>Nom</td>
-		<!-- <td>Prénom</td>
-		<td>Email</td>
-		<td>Téléphone</td>
-		<td>Adresse</td>
-		<td>Ville</td>
-		<td>Code postal</td> -->
-	</tr>
-	<c:forEach var="nomVariable" items="${clientList}">
-		<tr>
-			<td><c:out value="${nomVariable.nom}" /></td>
-			<%-- <td><c:out value="${nomVariable.prenom}" /></td>
-			<td><c:out value="${nomVariable.email}" /></td>
-			<td><c:out value="${nomVariable.telephone}" /></td>
-			<td><c:out value="${nomVariable.adresse}" /></td>
-			<td><c:out value="${nomVariable.ville}" /></td>
-			<td><c:out value="${nomVariable.codePostal}" /></td> --%>
-			<td></td>
-		</tr>
-	</c:forEach>
+<h2>Ajouter un Client</h2>
+<br />
+
+<table>
+	<form:form action="http://localhost:8090/client/ajouter" method="POST">
+		<td><form:input path="nom" placeholder="Nom" /></td>
+		<td><form:input path="prenom" placeholder="Prénom" /></td>
+		<td><form:input path="password" placeholder="Password" /></td>
+		<td><form:input path="email" placeholder="Email" /></td>
+		<td><form:input path="telephone" placeholder="Téléphone" /></td>
+		<td><form:input path="adresse" placeholder="Adresse" /></td>
+		<td><form:input path="codePostal" placeholder="Code postal" /></td>
+		<td><form:input path="ville" placeholder="Ville" /></td>
+		<td><input type="submit" value="Ajouter" /></td>
+	</form:form>
 </table>
->>>>>>> 3fe339d59839c7e77ffad438f81bf6e2856d5b9b
 <jsp:include page="layout/footer.jsp"></jsp:include>
