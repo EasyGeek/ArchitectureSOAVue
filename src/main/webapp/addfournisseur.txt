@@ -1,0 +1,67 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Ajout d'un fournisseur</title>
+</head>
+<body>
+	<table>
+		<form action="" method="post" enctype="multipart/form-data">
+	            <fieldset>
+	            	<tr>
+	            		<th>
+	            			<legend>Ajout d'un fournisseur</legend>
+            			</th>
+					</tr>
+					<tr>
+	                	<td>
+	                		<label for="description">Nom du client</label>
+                		</td>
+	                	<td>
+	                		<input type="text" id="name" name="name" value="" />
+	                	</td>
+	                </tr>
+	                <tr>
+	                	<td>
+	                		<label for="text">Adresse<span class="requis"></label>
+		                </td>
+		                <td>
+		                	<input type="text" id="adresse" name="adresse" />
+	                	</td>
+	                </tr>
+	                <tr>
+	                	<td>
+		                	<label for="text">Code Postal<span class="requis"></label>
+		                </td>
+		                <td>
+		                	<input type="text" id="cp" name="cp" />
+	                	</td>
+	                </tr>
+	                <tr>
+	                	<td>
+		                	<label for="text">Numéro<span class="requis"></label>
+		                </td>
+		                <td>
+		                	<input type="text" id="numero" name="numero" />
+	                	</td>
+	                </tr>
+	                <tr>
+	                	<td>
+		                	<label for="text">Email<span class="requis"></label>
+		                </td>
+		                <td>
+		                	<input type="text" id="email" name="email" />
+	                	</td>
+	                </tr>
+	                <tr>
+	                	<td><input type="submit" value="Envoyer" class="sansLabel" /></td>
+	                </tr>	           
+	            </fieldset>
+	        </form>
+        </table>
+        
+        <a href="fournisseur.jsp">Afficher les Fournisseur</a>  
+</body>
+</html>
