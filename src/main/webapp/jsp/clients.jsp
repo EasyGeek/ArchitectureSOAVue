@@ -28,8 +28,11 @@
 			<td><c:out value="${nomVariable.adresse}" /></td>
 			<td><c:out value="${nomVariable.ville}" /></td>
 			<td><c:out value="${nomVariable.codePostal}" /></td>
-			<td><a href="" >Modifier</a>
-			<td><form:form action ="http://localhost:8090/client/supprimer" method="POST"></form:form></td>			
+			<td><a href="">Modifier</a>
+			<td><input type="hidden" value="${nomVariable.clientId}" /> <form:form
+					action="http://localhost:8090/client/supprimer" method="DELETE">
+					<input type="submit" value="Supprimer" />
+				</form:form></td>
 		</tr>
 	</c:forEach>
 </table>
@@ -39,7 +42,7 @@
 <br />
 
 <table>
-	<form:form action="http://localhost:8090/client/ajouter" method="POST">
+	<form:form action="http://localhost:8081/client/ajouter" method="POST">
 		<td><form:input path="nom" placeholder="Nom" /></td>
 		<td><form:input path="prenom" placeholder="Prénom" /></td>
 		<td><form:input path="password" placeholder="Password" /></td>
