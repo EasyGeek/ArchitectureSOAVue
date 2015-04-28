@@ -5,7 +5,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <jsp:include page="layout/header.jsp"></jsp:include>
-<form:form action="http://localhost:8090/fournisseur/ajouter" method="POST">
+<form:form action="http://localhost:8080/ArchitectureSOAVue/fournisseurs/ajouter"
+	method="POST" modelAttribute="fournisseur">
 	<p>
 		<form:input path="nom" placeholder="Nom" />
 	</p>
@@ -35,6 +36,7 @@
 		<td>Adresse</td>
 		<td>Ville</td>
 		<td>Code postal</td>
+		<td></td>
 	</tr>
 	<c:forEach var="nomVariable" items="${fournisseurList}">
 		<tr>
@@ -43,7 +45,10 @@
 			<td><c:out value="${nomVariable.adresse}" /></td>
 			<td><c:out value="${nomVariable.ville}" /></td>
 			<td><c:out value="${nomVariable.codePostal}" /></td>
-			<td></td>
+			<td><form:form
+					action="http://localhost:8080/ArchitectureSOAVue/fournisseurs/supprimer/${nomVariable.fournisseurId}" method="POST">
+					<input type="submit" value="Supprimer" />
+				</form:form></td>
 		</tr>
 	</c:forEach>
 </table>
