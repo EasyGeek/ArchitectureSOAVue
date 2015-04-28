@@ -20,7 +20,7 @@ public class ClientController {
 	@RequestMapping(value = "/clients", method = RequestMethod.GET)
 	public ModelAndView getClients() {
 		mav.setViewName("clients");
-		
+				
 		mav.addObject("command", new Client());
 		mav.addObject("clientList", clientDao.getAll());
 
