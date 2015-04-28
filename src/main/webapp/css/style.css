@@ -1,3 +1,66 @@
-body{
-	background-color: #0ff;
+
+body {
+	font: 0.9em "Helvetica Neue", Helvetica, Arial, serif;
+	font-family: ;/* Police */
+	font-size: ;/* Taille de la police */
+	color: #272727;
+	margin: 0;
+}
+
+#logo{
+	margin: 10px;
+}
+
+#menu{
+	background-color: black;
+	height: 50px;
+}
+
+#menu p{
+	transition: background 0.5s;
+	background-color: grey;
+	margin-top: 2px;
+	margin-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 5px;
+}
+
+#menu p:hover{
+	transition: background 0.5s;
+	background-color: red;
+	
+}
+
+#menu a{
+	text-decoration: none;
+	color: white;
+}
+
+h2{
+	margin-left: 20px;
+	margin-top: 30px;
+}
+
+.content{
+	width : 940px;
+	margin : auto;
+}
+
+.formulaire{
+	width: 100%;
+}
+
+.formulaire input[type='text']{
+	width: 200px;
+	height: 20px;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.formulaire .btn{
+	margin-left: 420px;
+	margin-top: 20px;
 }
