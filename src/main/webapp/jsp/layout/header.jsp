@@ -7,7 +7,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<link rel="stylesheet" href="http://localhost:8080/ArchitectureSOAVue/css/bootstrap.css">
-	<link rel="stylesheet" href="http://localhost:8080/ArchitectureSOAVue/css/style.css">
+	<link rel="stylesheet" href="http://localhost:8080/ArchitectureSOAVue/css/backStyle.css">
 </head>
 <body>
 	<div id="logo">

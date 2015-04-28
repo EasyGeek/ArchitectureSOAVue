@@ -63,6 +63,9 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
+<<<<<<< HEAD
+/target/
+=======
 
  Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
 
@@ -90,3 +93,4 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
+>>>>>>> a80777280d8804609420a6ebb3143b30b9b1e680
