@@ -6,6 +6,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+	<link rel="stylesheet" href="http://localhost:8080/ArchitectureSOAVue/css/bootstrap.css">
 	<link rel="stylesheet" href="http://localhost:8080/ArchitectureSOAVue/css/style.css">
 </head>
 <body>
+	<div id="logo">
+		<a href="index.html"><img src="http://localhost:8080/ArchitectureSOAVue/images/logo.png" alt=""/></a>
+	</div>
+	<div id="menu">
+	<table>
+		<tr>
+			<td><p><a href="http://localhost:8080/ArchitectureSOAVue/fournisseurs">Fournisseurs</a></p>
+			<td><p><a href="http://localhost:8080/ArchitectureSOAVue/clients">Clients</a></p>
+			<td><p><a href="http://localhost:8080/ArchitectureSOAVue/stocks">Stocks</a></p>			
+		</tr>
+	</table>
+</div>

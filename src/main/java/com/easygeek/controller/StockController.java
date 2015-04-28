@@ -6,23 +6,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.easygeek.dao.ClientDao;
-import com.easygeek.entite.Client;
+import com.easygeek.dao.StockDao;
+import com.easygeek.entite.Stock;
 
 @Controller
-public class ClientController {
-
+public class StockController {
+	
 	public ModelAndView mav = new ModelAndView();
 
 	@Autowired
-	ClientDao clientDao;
+	StockDao stockDao;
 	
-	@RequestMapping(value = "/clients", method = RequestMethod.GET)
-	public ModelAndView getClients() {
-		mav.setViewName("clients");
-				
-		mav.addObject("command", new Client());
-		mav.addObject("clientList", clientDao.getAll());
+	@RequestMapping(value = "/stocks", method = RequestMethod.GET)
+	public ModelAndView getStocks() {
+		mav.setViewName("stocks");
+
+		mav.addObject("command", new Stock());
+		mav.addObject("stockList", stockDao.getAll());
 
 		return mav;
 	}
