@@ -28,7 +28,7 @@
 			<td><c:out value="${nomVariable.adresse}" /></td>
 			<td><c:out value="${nomVariable.ville}" /></td>
 			<td><c:out value="${nomVariable.codePostal}" /></td>
-			<td><a href="" >Modifier</a>
+			<td><a href="http://localhost:8090/client/modifier" method="POST" >Modifier</a>
 			<td><form:form action ="http://localhost:8090/client/supprimer" method="POST"></form:form></td>			
 		</tr>
 	</c:forEach>
