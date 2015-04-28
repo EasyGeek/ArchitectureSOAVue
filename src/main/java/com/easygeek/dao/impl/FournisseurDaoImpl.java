@@ -10,13 +10,26 @@ import com.easygeek.entite.Fournisseur;
 @Repository
 public class FournisseurDaoImpl implements FournisseurDao {
 
+	RestTemplate restTemplate = new RestTemplate();
+	
 	public Fournisseur[] getAll(){
-		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<Fournisseur[]> responseEntity = restTemplate
 				.getForEntity("http://localhost:8090/fournisseur",
 						Fournisseur[].class);
 		
 		return responseEntity.getBody();
+	}
+
+	public void sauvegarder(Fournisseur fournisseur) {
+		restTemplate.postForLocation("http://localhost:8090/fournisseur/ajouter", fournisseur, Fournisseur.class);
+	}
+
+	public void modifier(Fournisseur fournisseur) {
+		restTemplate.put("http://localhost:8090/fournisseur/modifier", fournisseur, Fournisseur.class);
+	}
+
+	public void supprimer(Integer id) {
+		restTemplate.delete("http://localhost:8090/fournisseur/supprimer/" + id);
 	}
 	
 }

@@ -10,7 +10,7 @@
 <div class="content">
 	<div class="formulaire">
 		<table>
-			<form:form action="http://localhost:8090/fournisseur/ajouter" method="POST">
+			<form:form action="http://localhost:8080/ArchitectureSOAVue/fournisseurs/ajouter" method="POST" modelAttribute="fournisseur">
 				<tr>
 				  <td><form:input path="nom" placeholder="Nom" /></td>
 				  <td><form:input path="telephone" placeholder="Téléphone" /></td>
@@ -24,19 +24,16 @@
 	</div>
 </div>
 
-
 <h2>Liste des fournisseurs</h2>
-<div class="content">
-	<table class="table table-condensed table-bordered">
-		<tr id="tableTitle">
-			<td>Nom</td>
-			<td>Téléphone</td>
-			<td>Adresse</td>
-			<td>Ville</td>
-			<td>Code postal</td>
-			<td>Modifier</td>
-			<td>Supprimer</td>
-		</tr>
+<table class="table table-condensed table-bordered">
+	<tr id="tableTitle">
+		<td>Nom</td>
+		<td>Téléphone</td>
+		<td>Adresse</td>
+		<td>Ville</td>
+		<td>Code postal</td>
+		<td></td>
+	</tr>
 		<c:forEach var="nomVariable" items="${fournisseurList}">
 			<tr>
 				<td>
@@ -57,11 +54,10 @@
 					<a href="http://localhost:8090/modificationfournisseur/" >Modifier</a>
 				</td>
 				<td>
-					<form:form action ="http://localhost:8090/fournisseur/supprimer/${nomVariable.fournisseurId}" method="DELETE"><input type="submit" value="Supprimer" /></form:form>
+					<form:form action ="http://localhost:8080/ArchitectureSOAVue/fournisseurs/supprimer/${nomVariable.fournisseurId}" method="POST"><input type="submit" value="Supprimer" /></form:form>
 				</td>			
 				
 			</tr>
 		</c:forEach>
 	</table>
-</div>
 <jsp:include page="layout/footer.jsp"></jsp:include>
