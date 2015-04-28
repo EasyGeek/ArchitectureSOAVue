@@ -1,3 +1,4 @@
+<jsp:include page="../header.jsp"/>
 <div class="login">
        <div class="wrap">
 	    <ul class="breadcrumb breadcrumb__t"><a class="home" href="#">Home</a>  / Contact</ul>
@@ -24,5 +25,4 @@
             </div>
        </div> 
     </div>
-</body>
-</html>
+<jsp:include page="../footer.jsp"/>
