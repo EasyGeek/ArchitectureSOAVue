@@ -27,4 +27,14 @@ public class FournisseurController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "/modificationfournisseurs", method = RequestMethod.GET)
+	public ModelAndView getModificationFournisseurs() {
+		mav.setViewName("fournisseurs");
+
+		mav.addObject("command", new Fournisseur());
+		mav.addObject("fournisseurList", fournisseurDao.getAll());
+
+		return mav;
+	}
+	
 }
