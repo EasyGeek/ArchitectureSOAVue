@@ -1,8 +1,13 @@
 <jsp:include page="header.jsp"/>
 <div class="login">
      <div class="wrap">
-		<h5 class="m_6">Shipments and Returns</h5>	
-		<p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+		<h5 class="m_6">OBJET</h5>	
+		<p class="m_text">Les Présentes Conditions Générales de Vente ont pour objet de définir les droits et obligations de DOMISYS (société proposant à la vente les produits sur le Site Internet qu’elle exploite : www.materiel.net et ses Clients (personnes physiques consommateurs et professionnels) dans le cadre de la vente de Produits par le biais du Site marchand www.materiel.net (ci-après le Site).
+		<br>
+		<p class="m_text">Le site Materiel.net est la propriété de la société Domisys, dont le siège social est situé Rue Olivier de Serres, BP 64505 Grandchamp des Fontaines, 44245 LA CHAPELLE SUR ERDRE CEDEX (SA au capital 272 605 €, RCS Nantes B 415 378 249, n° de TVA FR09415378249).</p>
+
+		<h5 class="m_6">CHAMP D'APPLICATION</h5>	
+		<p class="m_text">Les présentes Conditions Générales de Vente s'appliquent uniquement aux commandes passées sur le Site Internet www.materiel.net de produits livrés et facturés en France Métropolitaine, DOM-TOM, Belgique et étranger le cas échéant. Les Conditions applicables sont celles en vigueur sur le Site au moment de la passation de la commande. DOMISYS se réserve la faculté de modifier, sans préavis et à tout moment les présentes Conditions Générales de Vente, les modifications étant alors applicables à toutes commandes postérieures à ces modifications.</p>
 		<ul class="delivery-list">
 			<li><a href="#">Lorem ipsum dolor sit amet</a></li>
 			<li><a href="#">Consectetur adipisicing elit, sed do eiusmod tempor</a></li>
@@ -10,17 +15,14 @@
 			<li><a href="#">Ut enim ad minim veniam, quis nostrud</a></li>
 			<li><a href="#">Exercitation ullamco laboris nisi ut aliquip</a></li>
         </ul>
+		<p class="m_text">Toute commande de produits par le biais du Site implique l'acceptation sans réserve par le Client des présentes Conditions Générales de Vente. En conséquence, toute commande passée par le Client ne pourra être définitivement validée qu’après acceptation expresse, sans restrictions ni réserves, des présentes Conditions Générales de Vente.</p>
+		<p class="m_text">Conformément aux dispositions de l'article 1369-1 du Code civil, les présentes Conditions Générales de Vente peuvent être conservées par toute personne visitant le Site, par le moyen d'un enregistrement informatique et peuvent par ailleurs être reproduites par le Client, par le moyen de leur impression.</p>
+		<p class="m_text">Pour les Clients non consommateurs, les présentes conditions générales de vente (CGV) constituent le socle de la négociation commerciale. Elles prévalent sur les conditions d'achat. Toute condition contraire opposée par le Client sera, donc, inopposable à DOMISYS, quel que soit le moment où elle aura pu être portée à sa connaissance. Le fait que DOMISYS ne se prévale pas à un moment donné de l'une quelconque des présentes Conditions Générales de Vente ne peut être interprété comme valant renonciation à se prévaloir ultérieurement de l'une quelconque desdites conditions.</p>
+		<p class="m_text">La société DOMISYS, propriétaire du site internet Materiel.net, est amenée à proposer des jeux concours à ses clients sur son site internet. Un Règlement détaillé précisant les conditions de participation sera précisé dans le cadre de chaque jeu concours et présenté sur le site internet Materiel.net. La validation des présentes conditions générales de vente implique l'acceptation sans réserve de participation aux jeux concours et l’accord par le Participant du Règlement dans son intégralité. Ces conditions générales ne sont pas exclusives par ailleurs des dispositions légales françaises applicables, le cas échéant, aux jeux concours et loteries. Le Règlement de participation aux jeux concours est soumis à la loi française et tout litige relatif est soumis à la compétence exclusive de la juridiction du siège social.</p>
 		<p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-		<h5 class="m_6">Your Pack Shipment</h5>	
 		<p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-		<ul class="delivery-list">
-			<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-			<li><a href="#">Consectetur adipisicing elit, sed do eiusmod tempor</a></li>
-			<li><a href="#">Incididunt ut labore et dolore magna aliqua</a></li>
-			<li><a href="#">Ut enim ad minim veniam, quis nostrud</a></li>
-			<li><a href="#">Exercitation ullamco laboris nisi ut aliquip</a></li>
-        </ul>
 		<p class="m_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+		
 	</div>	
    </div>  
 <jsp:include page="footer.jsp"/>

@@ -1,7 +1,5 @@
 package com.easygeek.dao;
 
-import org.springframework.http.ResponseEntity;
-
 import com.easygeek.entite.Fournisseur;
 
 public interface FournisseurDao {

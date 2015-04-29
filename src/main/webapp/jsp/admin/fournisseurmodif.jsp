@@ -13,6 +13,7 @@
 			<form:form
 				action="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/modifier"
 				method="POST" modelAttribute="fournisseur">
+				<form:hidden path="fournisseurId" value="${fournisseur.fournisseurId}" />
 				<tr>
 					<th>Nom</th>
 					<td><form:input path="nom" placeholder="Nom"
@@ -37,7 +38,7 @@
 							value="${fournisseur.ville}" /></td>
 				</tr>
 				<tr>	
-					<th colspan="2"><input type="submit" value="Modifier" /></th>
+					<th colspan="2"><input type="submit" value="Modifier" class="btn btn-warning" /></th>
 				</tr>
 			</form:form>
 		</table>

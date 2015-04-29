@@ -15,4 +15,6 @@ public interface ComposantDao {
 	public Marque[] getMarque();
 	
 	public Type[] getType();
+	
+	public Composant getComposant(Integer id);
 }

@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div id="logo">
-		<a href="index.html"><img src="http://localhost:8080/ArchitectureSOAVue/images/logo.png" alt=""/></a>
+		<a href="http://localhost:8080/ArchitectureSOAVue/admin"><img src="http://localhost:8080/ArchitectureSOAVue/images/logo.png" alt=""/></a>
 	</div>
 	<div id="menu">
 	<table>
