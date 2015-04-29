@@ -26,23 +26,40 @@
 
 <br />
 <br />
-
-<h2>Liste des fournisseurs</h2>
+<!-- 
+{"reference":"10",
+"nom":"AMD FX-9590 Eight-Core",
+"description":"Attention chien méchant ! 
+Avec une fréquence maximale de 5 GHz en mode Turbo Core,  performances.",
+"prixHt":23.0,
+"pourcentageMarge":65.0,
+"image":"AMD FX-9590 Eight-Core.jpg",
+"promotion":null,
+"marqueId":18,
+"typeId":4}
+ -->
+<h2>Liste des composants</h2>
 <table class="table table-condensed table-bordered">
 	<tr id="tableTitle">
 		<td>Nom</td>
-		<td>Téléphone</td>
-		<td>Adresse</td>
-		<td>Ville</td>
-		<td>Code postal</td>
+		<td>description</td>
+		<td>prixHt</td>
+		<td>pourcentageMarge</td>
+		<td>image</td>
+		<td>promotion</td>
+		<td>marqueId</td>
+		<td>typeId</td>
 	</tr>
-	<c:forEach var="nomVariable" items="${fournisseurList}">
+	<c:forEach var="composant" items="${catalogueList}">
 		<tr>
-			<td><c:out value="${nomVariable.nom}" /></td>
-			<td><c:out value="${nomVariable.telephone}" /></td>
-			<td><c:out value="${nomVariable.adresse}" /></td>
-			<td><c:out value="${nomVariable.ville}" /></td>
-			<td><c:out value="${nomVariable.codePostal}" /></td>
+			<td><c:out value="${composant.nom}" /></td>
+			<td><c:out value="${composant.description}" /></td>
+			<td><c:out value="${composant.prixHt}" /></td>
+			<td><c:out value="${composant.pourcentageMarge}" /></td>
+			<td><c:out value="${composant.image}" /></td>
+			<td><c:out value="${composant.promotion}" /></td>
+			<td><c:out value="${composant.marqueId}" /></td>
+			<td><c:out value="${composant.typeId}" /></td>
 			<td></td>
 		</tr>
 	</c:forEach>
