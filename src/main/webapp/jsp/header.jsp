@@ -4,6 +4,11 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	isELIgnored="false" pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 <html lang = "fr">
 <head>
@@ -31,8 +36,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	   	<div class="wrap"> 
 			<div class="cssmenu">
 				<ul>
-					<li><a href="/connexion">Connexion</a></li> |
-					<li><a href="/register">Inscription</a></li>
+					<li><a href="connexion">Connexion</a></li> |
+					<li><a href="register">Inscription</a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -42,11 +47,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-					<a href="/accueil"><img src="images/logo.png" alt=""/></a>
+					<a href="index"><img src="images/logo.png" alt=""/></a>
 				</div>
 				<div class="menu">
 	            	<ul class="megamenu skyblue">
-						<li class="active grid"><a href="/accueil">Accueil</a></li>
+						<li class="active grid"><a href="index">Accueil</a></li>
 						<li><a class="color4" href="categorie">Composants PC</a>
 							<div class="megapanel">
 								<div class="row">
@@ -86,9 +91,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									</div>
 								</div>
 							</div>
-						</li>				
-						<li><a class="color6" href="/categorie">Ordinateurs</a></li>
-						<li><a class="color7" href="/categorie">PC Portables</a></li>
+						</li>		
+						<c:forEach var="type" items="${typeList}">
+						<li><a class="color6" href="categorie"><c:out value="${type.libelle}" /></a></li>
+						</c:forEach>
 					</ul>
 				</div>
 			</div>

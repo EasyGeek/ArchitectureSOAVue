@@ -17,15 +17,6 @@ public class CatalogueController {
 	@Autowired
 	ComposantDao composantDao;
 
-	@RequestMapping(value = "/catalogue", method = RequestMethod.GET)
-	public ModelAndView get() {
-		mav.setViewName("catalogue");
-
-		mav.addObject("catalogueList", composantDao.getAll());
-
-		return mav;
-	}
-
 	@RequestMapping(value = "/catalogue/type/{id}", method = RequestMethod.GET)
 	public ModelAndView getCatalogueType(@PathVariable Integer id) {
 		mav.setViewName("catalogue");
@@ -33,6 +24,13 @@ public class CatalogueController {
 		return mav;
 	}
 
+	@RequestMapping(value = "/catalogue", method = RequestMethod.GET)
+	public ModelAndView getCatalogueType() {
+		mav.setViewName("header");
+		mav.addObject("TypeList", composantDao.getType());
+		return mav;
+	}
+	
 	@RequestMapping(value = "/catalogue/marque/{id}", method = RequestMethod.GET)
 	public ModelAndView getCatalogueMarque(@PathVariable Integer id) {
 		mav.setViewName("catalogue");

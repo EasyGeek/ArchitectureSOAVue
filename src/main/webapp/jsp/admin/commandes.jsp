@@ -12,25 +12,27 @@
 <div class="content">
 	<table class="table table-condensed table-bordered">
 		<tr id="tableTitle">
-			<td>Nom</td>
-			<td>Prénom</td>
-			<td>Email</td>
-			<td>Téléphone</td>
-			<td>Adresse</td>
-			<td>Ville</td>
-			<td>Code postal</td>
-			<td>Modifier</td>
-			<td>Supprimer</td>
+			<td>N° Commande</td>
+			<td>Client</td>
+			<td>Produit</td>
+			<td>Marque</td>
+			<td>Type</td>
+			<td>Promotion</td>
+			<td>Quantité</td>
+			<td>Date</td>
+			<td>Fournisseur</td>
 		</tr>
-		<c:forEach var="nomVariable" items="${clientList}">
+		<c:forEach var="commande" items="${detailsCommandeList}">
+		
 			<tr>
-				<td><c:out value="${nomVariable.nom}" /></td>
-				<td><c:out value="${nomVariable.prenom}" /></td>
-				<td><c:out value="${nomVariable.email}" /></td>
-				<td><c:out value="${nomVariable.telephone}" /></td>
-				<td><c:out value="${nomVariable.adresse}" /></td>
-				<td><c:out value="${nomVariable.ville}" /></td>
-				<td><c:out value="${nomVariable.codePostal}" /></td>
+				<td><c:out value="${commande.id}" /></td>
+				<td><c:out value="${commande.client.id}" /></td>
+				<td><c:out value="${commande.composant.nom}" /></td>
+				<td><c:out value="${commande.composant.marqueId.libelle}" /></td>
+				<td><c:out value="${commande.composant.typeId.libelle}" /></td>
+				<td><c:out value="${commande.composant.promotion}" /></td>
+				<td><c:out value="${commande.quantite}" /></td>
+				<td><c:out value="{commande.commande.dateCommande}" /></td>
 				<td><a href="http://localhost:8090/client/" >Modifier</a>
 				<td><form:form action ="http://localhost:8090/client/supprimer/${nomVariable.clientId}" method="DELETE"><input type="submit" value="Supprimer" /></form:form></td>			
 			</tr>
