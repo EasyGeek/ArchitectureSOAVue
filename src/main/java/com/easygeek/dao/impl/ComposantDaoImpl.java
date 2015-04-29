@@ -6,34 +6,30 @@ import org.springframework.web.client.RestTemplate;
 import com.easygeek.dao.ComposantDao;
 import com.easygeek.entite.Composant;
 
-public class ComposantDaoImpl implements ComposantDao{
+public class ComposantDaoImpl implements ComposantDao {
 	RestTemplate restTemplate = new RestTemplate();
-	public Composant[] getByType(Integer id){
+
+	public Composant[] getByType(Integer id) {
 		ResponseEntity<Composant[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8081/catalogue/type/"+id,
+				.getForEntity("http://localhost:8081/catalogue/type/" + id,
 						Composant[].class);
-		
+
 		return responseEntity.getBody();
 	}
 
-	
-	public Composant[] getByMarque(Integer id){
-		ResponseEntity<Composant[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8081/catalogue/marque/"+id,
-						Composant[].class);
-		
+	public Composant[] getByMarque(Integer id) {
+		ResponseEntity<Composant[]> responseEntity = restTemplate.getForEntity(
+				"http://localhost:8081/catalogue/marque/" + id,
+				Composant[].class);
+
 		return responseEntity.getBody();
 	}
 
-
-	@Override
 	public Composant[] getAll() {
-		ResponseEntity<Composant[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8081/catalogue/",
-						Composant[].class);
-		
+		ResponseEntity<Composant[]> responseEntity = restTemplate.getForEntity(
+				"http://localhost:8081/catalogue/", Composant[].class);
+
 		return responseEntity.getBody();
-		}
-	
-	
+	}
+
 }

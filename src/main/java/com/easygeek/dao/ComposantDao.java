@@ -10,5 +10,4 @@ public interface ComposantDao {
 	
 	public Composant[] getAll();
 	
-	
 }
