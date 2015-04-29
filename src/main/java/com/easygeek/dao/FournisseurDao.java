@@ -14,6 +14,6 @@ public interface FournisseurDao {
 	
 	public void supprimer(Integer id);
 	
-	public ResponseEntity<Fournisseur> get(Integer id);
+	public Fournisseur get(Integer id);
 	
 }

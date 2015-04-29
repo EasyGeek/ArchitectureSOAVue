@@ -10,26 +10,26 @@
 <div class="content">
 	<table class="table table-condensed table-bordered">
 		<tr id="tableTitle">
-			<td>Réaprovisionnement</td>
-			<td>Produit</td>
-			<td>Marque</td>
-			<td>Type</td>
-			<td>Quantité</td>
-			<td>Fournisseur</td>
-			<td>Date</td>
+			<th>Réaprovisionnement</th>
+			<th>Produit</th>
+			<th>Marque</th>
+			<th>Type</th>
+			<th>Quantité</th>
+			<th>Fournisseur</th>
+			<th>Date</th>
 		</tr>
-		<c:forEach var="nomVariable" items="${stockList}">			
+		<c:forEach var="stock" items="${stockList}">
 			<tr>
-				<td><c:out value="${nomVariable.reapprovisionnement}" /></td>
-				<td><c:out value="${nomVariable.composant.nom}" /></td>
-				<td><c:out value="${nomVariable.composant.marqueId }" /></td>
-				<td><c:out value="${nomVariable.composant.typeId }" /></td>
-				<td><c:out value="${nomVariable.quantite}" /></td>
-				<td><c:out value="${nomVariable.fournisseur.nom}" /></td>
-				<td><c:out value="${nomVariable.date}" /></td>
+				<td><c:out value="${stock.reapprovisionnement}" /></td>
+				<td><c:out value="${stock.composant.nom}" /></td>
+				<td><c:out value="${stock.composant.marqueId.libelle }" /></td>
+				<td><c:out value="${stock.composant.typeId.libelle }" /></td>
+				<td><c:out value="${stock.quantite}" /></td>
+				<td><c:out value="${stock.fournisseur.nom}" /></td>
+				<td><c:out value="${stock.date}" /></td>
 			</tr>
 		</c:forEach>
-	
+
 	</table>
 </div>
 <jsp:include page="layout/footer.jsp"></jsp:include>
