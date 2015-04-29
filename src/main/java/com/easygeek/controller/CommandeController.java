@@ -14,9 +14,10 @@ import com.easygeek.entite.Commande;
 public class CommandeController {
 
 	public ModelAndView mav = new ModelAndView();
-
+/*
 	@Autowired
 	CommandeDao commandeDao;
+	@Autowired
 	DetailsCommandeDao detailsCommandeDao;
 	
 	@RequestMapping(value = "admin/commandes", method = RequestMethod.GET)
@@ -37,6 +38,6 @@ public class CommandeController {
 		mav.addObject("detailsCommandeList", detailsCommandeDao.getAll());
 
 		return mav;
-	}
+	}*/
 	
 }

@@ -23,7 +23,12 @@ public class CatalogueController {
 		mav.addObject("catalogueList", composantDao.getByType(id));
 		return mav;
 	}
-
+	@RequestMapping(value = "/catalogue/{id}", method = RequestMethod.GET)
+	public ModelAndView getCatalogueComposant(@PathVariable Integer id) {
+		mav.setViewName("catalogue");
+		mav.addObject("composantElement", composantDao.getComposant(id));
+		return mav;
+	}
 	@RequestMapping(value = "/catalogue", method = RequestMethod.GET)
 	public ModelAndView getCatalogueType() {
 		mav.setViewName("header");
