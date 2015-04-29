@@ -19,49 +19,49 @@ public class IndexController {
 	
 	@RequestMapping(value = "/categorie", method = RequestMethod.GET)
 	public ModelAndView categorie() {
-		mav.setViewName("function/categorie");
+		mav.setViewName("categorie");
 
 		return mav;
 	}
 	@RequestMapping(value = "/article", method = RequestMethod.GET)
 	public ModelAndView article() {
-		mav.setViewName("function/article");
+		mav.setViewName("article");
 
 		return mav;
 	}
 	@RequestMapping(value = "/conditions", method = RequestMethod.GET)
 	public ModelAndView conditions() {
-		mav.setViewName("function/conditions");
+		mav.setViewName("conditions");
 
 		return mav;
 	}
 	@RequestMapping(value = "/connexion", method = RequestMethod.GET)
 	public ModelAndView connexion() {
-		mav.setViewName("function/connexion");
+		mav.setViewName("connexion");
 
 		return mav;
 	}
 	@RequestMapping(value = "/contact", method = RequestMethod.GET)
 	public ModelAndView contact() {
-		mav.setViewName("function/contact");
+		mav.setViewName("contact");
 
 		return mav;
 	}
 	@RequestMapping(value = "/inscription", method = RequestMethod.GET)
 	public ModelAndView inscription() {
-		mav.setViewName("function/inscription");
+		mav.setViewName("inscription");
 
 		return mav;
 	}
 	@RequestMapping(value = "/nous", method = RequestMethod.GET)
 	public ModelAndView nous() {
-		mav.setViewName("function/nous");
+		mav.setViewName("nous");
 
 		return mav;
 	}
 	@RequestMapping(value = "/panier", method = RequestMethod.GET)
 	public ModelAndView panier() {
-		mav.setViewName("function/panier");
+		mav.setViewName("panier");
 
 		return mav;
 	}

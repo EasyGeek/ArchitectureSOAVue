@@ -14,22 +14,22 @@ public class FournisseurDaoImpl implements FournisseurDao {
 	
 	public Fournisseur[] getAll(){
 		ResponseEntity<Fournisseur[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8090/fournisseur",
+				.getForEntity("http://localhost:8081/fournisseur",
 						Fournisseur[].class);
 		
 		return responseEntity.getBody();
 	}
 
 	public void sauvegarder(Fournisseur fournisseur) {
-		restTemplate.postForLocation("http://localhost:8090/fournisseur/ajouter", fournisseur, Fournisseur.class);
+		restTemplate.postForLocation("http://localhost:8081/fournisseur/ajouter", fournisseur, Fournisseur.class);
 	}
 
 	public void modifier(Fournisseur fournisseur) {
-		restTemplate.put("http://localhost:8090/fournisseur/modifier", fournisseur, Fournisseur.class);
+		restTemplate.put("http://localhost:8081/fournisseur/modifier", fournisseur, Fournisseur.class);
 	}
 
 	public void supprimer(Integer id) {
-		restTemplate.delete("http://localhost:8090/fournisseur/supprimer/" + id);
+		restTemplate.delete("http://localhost:8081/fournisseur/supprimer/" + id);
 	}
 	
 	public void get(Integer id) {

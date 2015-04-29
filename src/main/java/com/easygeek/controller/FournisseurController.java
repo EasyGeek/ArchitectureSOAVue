@@ -59,6 +59,7 @@ public class FournisseurController {
 		getFournisseurs();
 		return mav;
 	}
+<<<<<<< HEAD
 	
 	@RequestMapping(value = "/admin/fournisseurmodif", method = RequestMethod.POST)
 	public ModelAndView getFournisseurModif(@PathVariable Integer id) {
@@ -66,5 +67,17 @@ public class FournisseurController {
 		getFournisseurs();
 		return mav;
 	}
-
+=======
 }
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 21e347fea66124c364903684fe1762a539d7b221
+
