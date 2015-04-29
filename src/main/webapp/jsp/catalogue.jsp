@@ -4,7 +4,7 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<jsp:include page="layout/header.jsp"></jsp:include>
+<%-- <jsp:include page="layout/header.jsp"></jsp:include> --%>
 <form:form action="http://localhost:8090/fournisseur/ajouter" method="POST">
 	<p>
 		<form:input path="nom" placeholder="Nom" />
@@ -47,4 +47,4 @@
 		</tr>
 	</c:forEach>
 </table>
-<jsp:include page="layout/footer.jsp"></jsp:include>
+<%-- <jsp:include page="layout/footer.jsp"></jsp:include> --%>
