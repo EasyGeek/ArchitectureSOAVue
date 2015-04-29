@@ -1,4 +1,4 @@
-<jsp:include page="../header.jsp"/>
+<jsp:include page="header.jsp"/>
 <div class="main">
 	<div class="mens">    
 	  <div class="main">
@@ -234,4 +234,4 @@
 				 <div class="clear"></div>
 			   </div>
 			</div>
-	<jsp:include page="../footer.jsp"/>
+	<jsp:include page="footer.jsp"/>

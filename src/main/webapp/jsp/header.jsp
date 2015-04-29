@@ -31,8 +31,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	   	<div class="wrap"> 
 			<div class="cssmenu">
 				<ul>
-					<li><a href="?page=connexion">Connexion</a></li> |
-					<li><a href="?page=register">Inscription</a></li>
+					<li><a href="/connexion">Connexion</a></li> |
+					<li><a href="/register">Inscription</a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -42,11 +42,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-					<a href="?page=accueil"><img src="images/logo.png" alt=""/></a>
+					<a href="/accueil"><img src="images/logo.png" alt=""/></a>
 				</div>
 				<div class="menu">
 	            	<ul class="megamenu skyblue">
-						<li class="active grid"><a href="?page=accueil">Accueil</a></li>
+						<li class="active grid"><a href="/accueil">Accueil</a></li>
 						<li><a class="color4" href="categorie">Composants PC</a>
 							<div class="megapanel">
 								<div class="row">
@@ -87,8 +87,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</div>
 							</div>
 						</li>				
-						<li><a class="color6" href="?page=categorie">Ordinateurs</a></li>
-						<li><a class="color7" href="?page=categorie">PC Portables</a></li>
+						<li><a class="color6" href="/categorie">Ordinateurs</a></li>
+						<li><a class="color7" href="/categorie">PC Portables</a></li>
 					</ul>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-<jsp:include page="../header.jsp"/>
+<jsp:include page="header.jsp"/>
 <div class="mens">    
   <div class="main">
      <div class="wrap">
@@ -486,4 +486,4 @@
 		   </div>
 		</div>
 		<script src="web/js/jquery.easydropdown.js">
-	</script><jsp:include page="../footer.jsp"/>
+	</script><jsp:include page="footer.jsp"/>
