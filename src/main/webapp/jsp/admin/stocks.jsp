@@ -10,18 +10,22 @@
 <div class="content">
 	<table class="table table-condensed table-bordered">
 		<tr id="tableTitle">
-			<td>Commande</td>
+			<td>Réaprovisionnement</td>
 			<td>Produit</td>
+			<td>Marque</td>
+			<td>Type</td>
 			<td>Quantité</td>
 			<td>Fournisseur</td>
 			<td>Date</td>
 		</tr>
 		<c:forEach var="nomVariable" items="${stockList}">			
 			<tr>
-				<td><c:out value="${nomVariable.id}" /></td>
-				<td><c:out value="${nomVariable.reference}" /></td>
+				<td><c:out value="${nomVariable.reapprovisionnement}" /></td>
+				<td><c:out value="${nomVariable.composant.nom}" /></td>
+				<td><c:out value="${nomVariable.marqueId }" /></td>
+				<td><c:out value="${nomVariable.typeId }" /></td>
 				<td><c:out value="${nomVariable.quantite}" /></td>
-				<td><c:out value="${nomVariable.fournisseurId}" /></td>
+				<td><c:out value="${nomVariable.fournisseur.nom}" /></td>
 				<td><c:out value="${nomVariable.date}" /></td>
 			</tr>
 		</c:forEach>

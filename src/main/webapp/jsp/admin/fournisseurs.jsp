@@ -52,7 +52,7 @@
 						<c:out value="${nomVariable.codePostal}" />
 					</td>
 					<td>
-						<a href="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurmodif" >Modifier</a>
+						<a href="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurmodif" value="" >Modifier</a>
 					</td>
 					<td>
 						<form:form action ="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/supprimer/${nomVariable.fournisseurId}" method="POST"><input type="submit" value="Supprimer" /></form:form>
