@@ -26,6 +26,13 @@ public class IndexController{
 		
 	}
 	
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public ModelAndView admin() {
+		mav.setViewName("admin/index");
+		return mav;
+		
+	}
+	
 	@RequestMapping(value = "/categorie/{id}", method = RequestMethod.GET)
 	public ModelAndView categorie(@PathVariable Integer id) {
 		mav.setViewName("categorie");
