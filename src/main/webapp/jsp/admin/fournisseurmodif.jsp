@@ -9,17 +9,37 @@
 <h2>Ajouter un Fournisseur</h2>
 <div class="content">
 	<div class="formulaire">
-		<table>
-			<form:form action="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/modifier" method="POST" modelAttribute="fournisseur">
-			<tr>
-			  <td><form:input path="nom" placeholder="Nom" value="${fournisseur.nom}" /></td>
-			  <td><form:input path="telephone" placeholder="Téléphone" value="${fournisseur.telephone}" /></td>
-			  <td><form:input path="adresse" placeholder="Adresse" value="${fournisseur.adresse}" /></td>
-			  <td><form:input path="codePostal" placeholder="Code postal" value="${fournisseur.codePostal}" /></td>
-			  <td><form:input path="ville" placeholder="Ville" value="${fournisseur.ville}" /></td>
-			  <td><input type="submit" value="Ajouter" /></td>
-			</tr>
-	  		</form:form>
+		<table class="table" >
+			<form:form
+				action="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/modifier"
+				method="POST" modelAttribute="fournisseur">
+				<tr>
+					<th>Nom</th>
+					<td><form:input path="nom" placeholder="Nom"
+							value="${fournisseur.nom}" /></td>
+				</tr>
+				<tr>
+					<th>Numéro de téléphone</th>
+					<td><form:input path="telephone" placeholder="Téléphone"
+							value="${fournisseur.telephone}" /></td>
+				</tr>
+					<th>Adresse</th>
+					<td><form:input path="adresse" placeholder="Adresse"
+							value="${fournisseur.adresse}" /></td>
+				<tr>
+					<th>Code Postal</th>
+					<td><form:input path="codePostal" placeholder="Code postal"
+							value="${fournisseur.codePostal}" /></td>
+				</tr>
+				<tr>
+					<th>Ville</th>
+					<td><form:input path="ville" placeholder="Ville"
+							value="${fournisseur.ville}" /></td>
+				</tr>
+				<tr>	
+					<th colspan="2"><input type="submit" value="Modifier" /></th>
+				</tr>
+			</form:form>
 		</table>
 	</div>
 </div>

@@ -12,15 +12,13 @@
 <div class="content">
 	<table class="table table-condensed table-bordered">
 		<tr id="tableTitle">
-			<td>Nom</td>
-			<td>Prénom</td>
-			<td>Email</td>
-			<td>Téléphone</td>
-			<td>Adresse</td>
-			<td>Ville</td>
-			<td>Code postal</td>
-			<td>Modifier</td>
-			<td>Supprimer</td>
+			<th>Nom</th>
+			<th>Prénom</th>
+			<th>Email</th>
+			<th>Téléphone</th>
+			<th>Adresse</th>
+			<th>Ville</th>
+			<th>Code postal</th>
 		</tr>
 		<c:forEach var="nomVariable" items="${clientList}">
 			<tr>
@@ -31,8 +29,6 @@
 				<td><c:out value="${nomVariable.adresse}" /></td>
 				<td><c:out value="${nomVariable.ville}" /></td>
 				<td><c:out value="${nomVariable.codePostal}" /></td>
-				<td><a href="http://localhost:8090/client/" >Modifier</a>
-				<td><form:form action ="http://localhost:8090/client/supprimer/${nomVariable.clientId}" method="DELETE"><input type="submit" value="Supprimer" /></form:form></td>			
 			</tr>
 		</c:forEach>
 	</table>

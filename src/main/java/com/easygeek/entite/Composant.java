@@ -1,5 +1,8 @@
 package com.easygeek.entite;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Composant implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -12,27 +15,6 @@ public class Composant implements java.io.Serializable {
 	private Double promotion;
 	private Marque marque;
 	private Type type;
-
-	public Composant() {
-	}
-
-	public Composant(String reference) {
-		this.reference = reference;
-	}
-
-	public Composant(String reference, String nom, String description,
-			Double prixHt, Double pourcentageMarge, String image,
-			Double promotion, Marque marqueId, Type typeId) {
-		this.reference = reference;
-		this.nom = nom;
-		this.description = description;
-		this.prixHt = prixHt;
-		this.pourcentageMarge = pourcentageMarge;
-		this.image = image;
-		this.promotion = promotion;
-		this.marque = marqueId;
-		this.type = typeId;
-	}
 
 	public String getReference() {
 		return this.reference;
