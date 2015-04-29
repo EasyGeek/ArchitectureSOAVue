@@ -4,10 +4,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
+import com.easygeek.dao.CommandeDao;
 import com.easygeek.entite.Commande;
 
 @Repository
-public class CommandeDaoImpl {
+public class CommandeDaoImpl implements CommandeDao {
 
 	public Commande[] getAll(){
 		RestTemplate restTemplate = new RestTemplate();

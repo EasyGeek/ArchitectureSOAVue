@@ -17,10 +17,18 @@ public class CatalogueController {
 	@Autowired
 	ComposantDao composantDao;
 
+	@RequestMapping(value = "/catalogue", method = RequestMethod.GET)
+	public ModelAndView get() {
+		mav.setViewName("catalogue");
+		mav.addObject("composantList", composantDao.getAll());
+		mav.addObject("marqueList", composantDao.getMarque());
+		return mav;
+	}
+
 	@RequestMapping(value = "/catalogue/type/{id}", method = RequestMethod.GET)
 	public ModelAndView getCatalogueType(@PathVariable Integer id) {
 		mav.setViewName("catalogue");
-		mav.addObject("catalogueList", composantDao.getByType(id));
+		mav.addObject("composantList", composantDao.getByType(id));
 		return mav;
 	}
 	@RequestMapping(value = "/catalogue/{id}", method = RequestMethod.GET)
@@ -29,17 +37,24 @@ public class CatalogueController {
 		mav.addObject("composantElement", composantDao.getComposant(id));
 		return mav;
 	}
-	@RequestMapping(value = "/catalogue", method = RequestMethod.GET)
-	public ModelAndView getCatalogueType() {
-		mav.setViewName("header");
-		mav.addObject("TypeList", composantDao.getType());
-		return mav;
-	}
-	
 	@RequestMapping(value = "/catalogue/marque/{id}", method = RequestMethod.GET)
 	public ModelAndView getCatalogueMarque(@PathVariable Integer id) {
 		mav.setViewName("catalogue");
-		mav.addObject("catalogueList", composantDao.getByMarque(id));
+		mav.addObject("composantList", composantDao.getByMarque(id));
+		return mav;
+	}
+	
+	@RequestMapping(value = "/type", method = RequestMethod.GET)
+	public ModelAndView getType() {
+		mav.setViewName("catalogue");
+		mav.addObject("typeList", composantDao.getType());
+		return mav;
+	}
+	
+	@RequestMapping(value = "/marque", method = RequestMethod.GET)
+	public ModelAndView getMarque() {
+		mav.setViewName("catalogue");
+		mav.addObject("marqueList", composantDao.getMarque());
 		return mav;
 	}
 }

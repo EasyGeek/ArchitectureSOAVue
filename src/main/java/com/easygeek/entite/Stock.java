@@ -5,18 +5,17 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-
 public class Stock implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private Integer idStock;
 	private Date dateStock;
 	private Boolean reapprovisionnement;
 	private Integer quantite;
 	private Composant composant;
 	private Fournisseur fournisseur;
-	
+
 	public Integer getId() {
 		return this.idStock;
 	}
@@ -24,7 +23,7 @@ public class Stock implements java.io.Serializable {
 	public void setId(Integer idStock) {
 		this.idStock = idStock;
 	}
-	
+
 	public Composant getComposant() {
 		return this.composant;
 	}
@@ -32,7 +31,7 @@ public class Stock implements java.io.Serializable {
 	public void setComposant(Composant composant) {
 		this.composant = composant;
 	}
-	
+
 	public Date getDate() {
 		return this.dateStock;
 	}
