@@ -49,5 +49,15 @@ public class FournisseurController {
 		getFournisseurs();
 		return mav;
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
