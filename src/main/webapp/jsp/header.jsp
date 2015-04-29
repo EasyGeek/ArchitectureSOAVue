@@ -4,6 +4,11 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	isELIgnored="false" pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 <html lang = "fr">
 <head>
@@ -86,9 +91,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									</div>
 								</div>
 							</div>
-						</li>				
-						<li><a class="color6" href="categorie">Ordinateurs</a></li>
-						<li><a class="color7" href="categorie">PC Portables</a></li>
+						</li>		
+						<c:forEach var="type" items="${typeList}">
+						<li><a class="color6" href="categorie"><c:out value="${type.libelle}" /></a></li>
+						</c:forEach>
 					</ul>
 				</div>
 			</div>
