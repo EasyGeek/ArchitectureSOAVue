@@ -1,6 +1,6 @@
 package com.easygeek.entite;
 
-import java.sql.Date;
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -9,28 +9,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Stock implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
 	private Integer idStock;
-	private String reference;
 	private Date dateStock;
 	private Boolean reapprovisionnement;
 	private Integer quantite;
-	private Integer fournisseurId;
-	
-
-	public Stock() {
-	}
-
-	public Stock(Integer idStock) {
-		this.idStock = idStock;
-	}
-
-	public Stock(Integer idStock, Date dateStock, Boolean reapprovisionnement,
-			Integer quantite) {
-		this.idStock = idStock;
-		this.dateStock = dateStock;
-		this.reapprovisionnement = reapprovisionnement;
-		this.quantite = quantite;
-	}
+	private Composant composant;
+	private Fournisseur fournisseur;
 	
 	public Integer getId() {
 		return this.idStock;
@@ -40,20 +25,12 @@ public class Stock implements java.io.Serializable {
 		this.idStock = idStock;
 	}
 	
-	public Integer getFournisseurId() {
-		return fournisseurId;
+	public Composant getComposant() {
+		return this.composant;
 	}
 
-	public void setFournisseurId(Integer fournisseurId) {
-		this.fournisseurId = fournisseurId;
-	}
-
-	public String getReference() {
-		return this.reference;
-	}
-
-	public void setReference(String reference) {
-		this.reference = reference;
+	public void setComposant(Composant composant) {
+		this.composant = composant;
 	}
 	
 	public Date getDate() {
@@ -78,6 +55,14 @@ public class Stock implements java.io.Serializable {
 
 	public void setQuantite(Integer quantite) {
 		this.quantite = quantite;
+	}
+
+	public Fournisseur getFournisseur() {
+		return fournisseur;
+	}
+
+	public void setFournisseur(Fournisseur fournisseur) {
+		this.fournisseur = fournisseur;
 	}
 
 }

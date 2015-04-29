@@ -33,6 +33,13 @@ public class CatalogueController {
 		return mav;
 	}
 
+	@RequestMapping(value = "/catalogue", method = RequestMethod.GET)
+	public ModelAndView getCatalogueType() {
+		mav.setViewName("header");
+		mav.addObject("TypeList", composantDao.getType());
+		return mav;
+	}
+	
 	@RequestMapping(value = "/catalogue/marque/{id}", method = RequestMethod.GET)
 	public ModelAndView getCatalogueMarque(@PathVariable Integer id) {
 		mav.setViewName("catalogue");

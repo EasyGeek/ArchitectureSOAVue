@@ -7,27 +7,17 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class DetailsCommande implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private DetailsCommandeId id;
+	private Integer id;
 	private Float quantite;
-
-	public DetailsCommande() {
-	}
-
-	public DetailsCommande(DetailsCommandeId id) {
+	private Composant composant;
+	private Commande commande;
+	
+	public void setId(Integer id) {
 		this.id = id;
 	}
-
-	public DetailsCommande(DetailsCommandeId id, Float quantite) {
-		this.id = id;
-		this.quantite = quantite;
-	}
-
-	public DetailsCommandeId getId() {
-		return this.id;
-	}
-
-	public void setId(DetailsCommandeId id) {
-		this.id = id;
+	
+	public Integer getId() {
+		return id;
 	}
 
 	public Float getQuantite() {
@@ -36,6 +26,22 @@ public class DetailsCommande implements java.io.Serializable {
 
 	public void setQuantite(Float quantite) {
 		this.quantite = quantite;
+	}
+	
+	public Composant getComposant() {
+		return this.composant;
+	}
+
+	public void setComposant(Composant composant) {
+		this.composant = composant;
+	}
+
+	public Commande getCommande() {
+		return this.commande;
+	}
+
+	public void setCommande(Commande commande) {
+		this.commande = commande;
 	}
 
 }

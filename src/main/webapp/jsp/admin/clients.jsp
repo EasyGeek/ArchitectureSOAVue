@@ -7,39 +7,7 @@
 <jsp:include page="layout/header.jsp"></jsp:include>
 
 <h2>Liste des clients</h2>
-<<<<<<< HEAD
-<table class="table table-condensed table-bordered">
-	<tr id="tableTitle">
-		<td>Nom</td>
-		<td>Prénom</td>
-		<td>Email</td>
-		<td>Téléphone</td>
-		<td>Adresse</td>
-		<td>Ville</td>
-		<td>Code postal</td>
-		<td>Modifier</td>
-		<td>Supprimer</td>
-	</tr>
-	<c:forEach var="nomVariable" items="${clientList}">
-		<tr>
-			<td><c:out value="${nomVariable.nom}" /></td>
-			<td><c:out value="${nomVariable.prenom}" /></td>
-			<td><c:out value="${nomVariable.email}" /></td>
-			<td><c:out value="${nomVariable.telephone}" /></td>
-			<td><c:out value="${nomVariable.adresse}" /></td>
-			<td><c:out value="${nomVariable.ville}" /></td>
-			<td><c:out value="${nomVariable.codePostal}" /></td>
-			<td><a href="http://localhost:8090/client/modifier" method="POST" >Modifier</a>
-			<td><form:form action ="http://localhost:8090/client/supprimer" method="POST"></form:form></td>			
-		</tr>
-	</c:forEach>
-</table>
-<br />
 
-<h2>Ajouter un Client</h2>
-<br />
-=======
->>>>>>> 35fe26c9a5c5553a3fc611468baa2e9ba1dd88d7
 
 <div class="content">
 	<table class="table table-condensed table-bordered">

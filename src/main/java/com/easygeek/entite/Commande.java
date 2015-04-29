@@ -1,7 +1,8 @@
 package com.easygeek.entite;
 
-import java.sql.Date;
+import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -34,6 +35,8 @@ public class Commande implements java.io.Serializable {
 		this.commandeId = commandeId;
 	}
 
+
+	@JsonBackReference
 	public Client getClient() {
 		return this.client;
 	}
@@ -50,6 +53,7 @@ public class Commande implements java.io.Serializable {
 		this.dateCommande = dateCommande;
 	}
 
+
 	public Double getPrixHt() {
 		return this.prixHt;
 	}
@@ -57,6 +61,7 @@ public class Commande implements java.io.Serializable {
 	public void setPrixHt(Double prixHt) {
 		this.prixHt = prixHt;
 	}
+
 
 	public Integer getTypeLivraisonId() {
 		return this.typeLivraisonId;

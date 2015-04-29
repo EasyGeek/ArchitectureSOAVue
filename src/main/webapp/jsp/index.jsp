@@ -362,9 +362,9 @@
 			<div class="rsidebar span_1_of_left">
 				<div class="top-border"> </div>
 				 <div class="border">
-	             <link href="web/css/default.css" rel="stylesheet" type="text/css" media="all" />
-	             <link href="web/css/nivo-slider.css" rel="stylesheet" type="text/css" media="all" />
-				  <script src="web/js/jquery.nivo.slider.js"></script>
+	             <link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
+	             <link href="css/nivo-slider.css" rel="stylesheet" type="text/css" media="all" />
+				  <script src="js/jquery.nivo.slider.js"></script>
 				    <script type="text/javascript">
 				    $(window).load(function() {
 				        $('#slider').nivoSlider();
