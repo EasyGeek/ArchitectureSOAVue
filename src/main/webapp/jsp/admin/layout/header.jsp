@@ -16,9 +16,9 @@
 	<div id="menu">
 	<table>
 		<tr>
-			<td><p><a href="http://localhost:8080/ArchitectureSOAVue/fournisseurs">Fournisseurs</a></p>
-			<td><p><a href="http://localhost:8080/ArchitectureSOAVue/clients">Clients</a></p>
-			<td><p><a href="http://localhost:8080/ArchitectureSOAVue/stocks">Stocks</a></p>			
+			<td><p><a href="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs">Fournisseurs</a></p>
+			<td><p><a href="http://localhost:8080/ArchitectureSOAVue/admin/clients">Clients</a></p>
+			<td><p><a href="http://localhost:8080/ArchitectureSOAVue/admin/stocks">Stocks</a></p>			
 		</tr>
 	</table>
 </div>

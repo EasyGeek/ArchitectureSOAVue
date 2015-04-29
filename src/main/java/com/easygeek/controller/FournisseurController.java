@@ -18,10 +18,10 @@ public class FournisseurController {
 
 	@Autowired
 	FournisseurDao fournisseurDao;
-	
-	@RequestMapping(value = "/fournisseurs", method = RequestMethod.GET)
+
+	@RequestMapping(value = "admin/fournisseurs", method = RequestMethod.GET)
 	public ModelAndView getFournisseurs() {
-		mav.setViewName("fournisseurs");
+		mav.setViewName("admin/fournisseurs");
 
 		mav.addObject("fournisseur", new Fournisseur());
 		mav.addObject("fournisseurList", fournisseurDao.getAll());
@@ -29,26 +29,45 @@ public class FournisseurController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/fournisseurs/ajouter", method = RequestMethod.POST)
+	@RequestMapping(value = "admin/fournisseurmodif", method = RequestMethod.GET)
+	public ModelAndView getFournisseurModifier() {
+		mav.setViewName("admin/fournisseurmodif");
+
+		mav.addObject("fournisseur", new Fournisseur());
+		mav.addObject("fournisseurList", fournisseurDao.getAll());
+
+		return mav;
+	}
+	
+	@RequestMapping(value = "/admin/fournisseurs/ajouter", method = RequestMethod.POST)
 	public ModelAndView ajouterFournisseurs(@ModelAttribute("fournisseur") Fournisseur fournisseur) {
 		fournisseurDao.sauvegarder(fournisseur);
 		getFournisseurs();
 		return mav;
 	}
 	
-	@RequestMapping(value = "/fournisseurs/modifier", method = RequestMethod.POST)
+	@RequestMapping(value = "/admin/fournisseurs/modifier", method = RequestMethod.POST)
 	public ModelAndView modifierFournisseurs(@ModelAttribute("fournisseur") Fournisseur fournisseur) {
 		fournisseurDao.modifier(fournisseur);
 		getFournisseurs();
 		return mav;
 	}
 	
-	@RequestMapping(value = "/fournisseurs/supprimer/{id}", method = RequestMethod.POST)
+	@RequestMapping(value = "/admin/fournisseurs/supprimer/{id}", method = RequestMethod.POST)
 	public ModelAndView supprimerFournisseurs(@PathVariable Integer id) {
 		fournisseurDao.supprimer(id);
 		getFournisseurs();
 		return mav;
 	}
+<<<<<<< HEAD
+	
+	@RequestMapping(value = "/admin/fournisseurmodif", method = RequestMethod.POST)
+	public ModelAndView getFournisseurModif(@PathVariable Integer id) {
+		fournisseurDao.get(id);
+		getFournisseurs();
+		return mav;
+	}
+=======
 }
 
 
@@ -60,4 +79,5 @@ public class FournisseurController {
 
 
 
+>>>>>>> 21e347fea66124c364903684fe1762a539d7b221
 
