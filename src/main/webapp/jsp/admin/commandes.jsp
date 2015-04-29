@@ -6,7 +6,7 @@
 
 <jsp:include page="layout/header.jsp"></jsp:include>
 
-<h2>Liste des clients</h2>
+<h2>Liste des commandes</h2>
 
 
 <div class="content">

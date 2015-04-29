@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.easygeek.dao.ComposantDao;
 
 @Controller
-public class IndexController {
+public class IndexController{
 
 	public ModelAndView mav = new ModelAndView();
 
@@ -22,6 +22,13 @@ public class IndexController {
 		mav.setViewName("index");
 		mav.addObject("typeList", composantDao.getType());
 		mav.addObject("composantList", composantDao.getAll());
+		return mav;
+		
+	}
+	
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public ModelAndView admin() {
+		mav.setViewName("admin/index");
 		return mav;
 		
 	}
