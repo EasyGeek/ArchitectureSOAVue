@@ -13,7 +13,7 @@
 
     <bean id="messageSource"
         class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-        <property name="basename" value="classpath:messages" />
+        <property name="basename" value="classpath:application" />
         <property name="defaultEncoding" value="ISO-8859-1" />
     </bean>
     

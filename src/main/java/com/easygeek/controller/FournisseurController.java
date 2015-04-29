@@ -19,21 +19,13 @@ public class FournisseurController {
 	@Autowired
 	FournisseurDao fournisseurDao;
 
-	@RequestMapping(value = "admin/fournisseurs", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/fournisseurs", method = RequestMethod.GET)
 	public ModelAndView getFournisseurs() {
 		mav.setViewName("admin/fournisseurs");
 
 		mav.addObject("fournisseur", new Fournisseur());
 		mav.addObject("fournisseurList", fournisseurDao.getAll());
 
-		return mav;
-	}
-	
-	@RequestMapping(value = "admin/fournisseur/modifier/{id}", method = RequestMethod.POST)
-	public ModelAndView getFournisseurModifier(@PathVariable Integer id) {
-		mav.setViewName("admin/fournisseurmodif");
-
-		mav.addObject("fournisseur", fournisseurDao.get(id));
 		return mav;
 	}
 	
@@ -48,6 +40,13 @@ public class FournisseurController {
 	public ModelAndView modifierFournisseurs(@ModelAttribute("fournisseur") Fournisseur fournisseur) {
 		fournisseurDao.modifier(fournisseur);
 		getFournisseurs();
+		return mav;
+	}
+	
+	@RequestMapping(value = "/admin/fournisseurs/modifier/{id}", method = RequestMethod.POST)
+	public ModelAndView getFournisseurModifier(@PathVariable Integer id) {
+		mav.setViewName("admin/fournisseurmodif");
+		mav.addObject("fournisseur", fournisseurDao.get(id));
 		return mav;
 	}
 	

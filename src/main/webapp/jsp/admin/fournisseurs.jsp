@@ -52,7 +52,7 @@
 						<c:out value="${nomVariable.codePostal}" />
 					</td>
 					<td>
-						<form:form action ="http://localhost:8080/ArchitectureSOAVue/admin/fournisseur/modifier/${nomVariable.fournisseurId}" method="POST"><input type="submit" value="Modifier" /></form:form>
+						<form:form action ="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/modifier/${nomVariable.fournisseurId}" method="POST"><input type="submit" value="Modifier" /></form:form>
 					</td>
 					<td>
 						<form:form action ="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/supprimer/${nomVariable.fournisseurId}" method="POST"><input type="submit" value="Supprimer" /></form:form>

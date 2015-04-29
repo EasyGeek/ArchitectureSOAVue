@@ -1,4 +1,4 @@
-<jsp:include page="header.jsp"/>
+<jsp:include page="<spring:message code="header"/>"/>
 	<div class="main">
 		  <!-- start slider -->
     <div id="fwslider">

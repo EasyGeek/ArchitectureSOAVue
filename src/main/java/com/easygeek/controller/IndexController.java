@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.easygeek.dao.ComposantDao;
 
 @Controller
-public class IndexController {
+public class IndexController{
 
 	public ModelAndView mav = new ModelAndView();
 

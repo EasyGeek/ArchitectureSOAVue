@@ -13,7 +13,7 @@ public class DetailsCommandeDaoImpl implements DetailsCommandeDao {
 	public DetailsCommande[] getAll(){
 		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<DetailsCommande[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8090/detailscommande",
+				.getForEntity("http://localhost:8081/detailscommande",
 						DetailsCommande[].class);
 		
 		return responseEntity.getBody();

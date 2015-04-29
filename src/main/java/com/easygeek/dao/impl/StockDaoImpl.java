@@ -13,7 +13,7 @@ public class StockDaoImpl implements StockDao{
 	public Stock[] getAll(){
 		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<Stock[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8090/stock",
+				.getForEntity("http://localhost:8081/stock",
 						Stock[].class);
 		
 		return responseEntity.getBody();

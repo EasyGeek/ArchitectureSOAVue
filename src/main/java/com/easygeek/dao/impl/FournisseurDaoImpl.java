@@ -32,9 +32,9 @@ public class FournisseurDaoImpl implements FournisseurDao {
 		restTemplate.delete("http://localhost:8090/fournisseur/supprimer/" + id);
 	}
 	
-	public ResponseEntity<Fournisseur> get(Integer id) {
-		
-		return restTemplate.getForEntity("http://localhost:8090/fournisseur", Fournisseur.class);
+	public Fournisseur get(Integer id) {
+		ResponseEntity<Fournisseur> fournisseur = restTemplate.getForEntity("http://localhost:8090/fournisseur/" + id, Fournisseur.class);
+		return fournisseur.getBody();
 	}
 	
 }
