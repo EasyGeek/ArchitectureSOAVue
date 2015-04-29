@@ -17,9 +17,9 @@ public class StockController {
 	@Autowired
 	StockDao stockDao;
 	
-	@RequestMapping(value = "/stocks", method = RequestMethod.GET)
+	@RequestMapping(value = "admin/stocks", method = RequestMethod.GET)
 	public ModelAndView getStocks() {
-		mav.setViewName("stocks");
+		mav.setViewName("admin/stocks");
 
 		mav.addObject("command", new Stock());
 		mav.addObject("stockList", stockDao.getAll());
