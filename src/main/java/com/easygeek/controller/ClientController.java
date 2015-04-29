@@ -17,9 +17,9 @@ public class ClientController {
 	@Autowired
 	ClientDao clientDao;
 	
-	@RequestMapping(value = "/clients", method = RequestMethod.GET)
+	@RequestMapping(value = "admin/clients", method = RequestMethod.GET)
 	public ModelAndView getClients() {
-		mav.setViewName("clients");
+		mav.setViewName("admin/clients");
 				
 		mav.addObject("command", new Client());
 		mav.addObject("clientList", clientDao.getAll());

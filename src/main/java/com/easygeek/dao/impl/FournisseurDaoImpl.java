@@ -32,4 +32,9 @@ public class FournisseurDaoImpl implements FournisseurDao {
 		restTemplate.delete("http://localhost:8090/fournisseur/supprimer/" + id);
 	}
 	
+	public void get(Integer id) {
+		restTemplate.delete("http://localhost:8090/fournisseur");
+	}
+	
 }
+

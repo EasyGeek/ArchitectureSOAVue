@@ -12,4 +12,6 @@ public interface FournisseurDao {
 	
 	public void supprimer(Integer id);
 	
+	public void get(Integer id);
+	
 }
