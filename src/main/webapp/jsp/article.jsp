@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	isELIgnored="false" pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="header.jsp"/>
 <div class="main">
 	<div class="mens">    
@@ -5,46 +10,43 @@
 	     <div class="wrap">
 	     	<ul class="breadcrumb breadcrumb__t"><a class="home" href="#">Home</a> / <a href="#">Dolor sit amet</a> / Lorem ipsum dolor sit amet</ul>
 			<div class="cont span_2_of_3">
+			<c:forEach var="composant" items="${composant}"  begin="0" end="1">
 			  	<div class="grid images_3_of_2">
 							<div id="container">
 								<div id="products_example">
 									<div id="products">
 										<div class="slides_container">
-										        <a href="#"><img class="a" id="img1" src="web/images/s-img.jpg" alt="" rel="web/images/s-img.jpg" /></a>
-												<a href="#"><img class="a" id="img2" src="web/images/s-img1.jpg" alt="" rel="web/images/s-img1.jpg" /></a>
-												<a href="#"><img class="a" id="img3" src="web/images/s-img2.jpg" alt="" rel="web/images/s-img2.jpg" /></a>
-												<a href="#"><img class="a" id="img4" src="web/images/s-img3.jpg" alt="" rel="web/images/s-img3.jpg" /></a>
+										        <img class="a" id="img1" src="images/${composant.image}" alt="${composant.nom}" />" />
 										</div>
 										<ul class="pagination">
-											<li><a href="#"><img src="web/images/s1.jpg" width="s-img" alt="1144953 3 2x"></a></li>
-											<li><a href="#"><img src="web/images/s2.jpg" width="s-img1" alt="1144953 3 2x"></a></li>
-											<li><a href="#"><img src="web/images/s3.jpg" width="s-img2" alt="1144953 3 2x"></a></li>
-											<li><a href="#"><img src="web/images/s4.jpg" width="s-img3" alt="1144953 1 2x"></a></li><div class="clear"></div>
+											<li><img class="a" id="img1" src="images/${composant.image}" alt="${composant.nom}" />" /></li>
+											<div class="clear"></div>
 										</ul>
 									</div>
 								</div>
 							</div>
 		            </div>
 			         <div class="desc1 span_3_of_2">
-			         	<h3 class="m_3">Lorem ipsum dolor sit amet</h3>
-			             <p class="m_5">Rs. 888 <span class="reducedfrom">Rs. 999</span> <a href="#">click for offer</a></p>
+			         	<h3 class="m_3"><c:out value="${composant.nom}" /></h3>
+			             <p class="m_5"><c:out value="${composant.prixHt}" /><span class="reducedfrom"><c:out value="${composant.reduce}" /></span> <a href="#">click for offer</a></p>
 			         	 <div class="btn_form">
 							<form>
 								<input type="submit" value="buy" title="">
 							</form>
 						 </div>
 						<span class="m_link"><a href="#">login to save in wishlist</a> </span>
-					     <p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit </p>
+					     <p class="m_text2"><c:out value="${composant.description}" /></p>
 				     </div>
-				   <div class="clear"></div>	
+				   <div class="clear"></div>
+			</c:forEach>	
 		    <div class="clients">
-		    <h3 class="m_3">10 Other Products in the same category</h3>
+		    <h3 class="m_3">10 autres produits de la même catégorie</h3>
 			 <ul id="flexiselDemo3">
-				<li><img src="web/images/s5.jpg" /><a href="#">Category</a><p>Rs 600</p></li>
-				<li><img src="web/images/s6.jpg" /><a href="#">Category</a><p>Rs 850</p></li>
-				<li><img src="web/images/s7.jpg" /><a href="#">Category</a><p>Rs 900</p></li>
-				<li><img src="web/images/s8.jpg" /><a href="#">Category</a><p>Rs 550</p></li>
-				<li><img src="web/images/s9.jpg" /><a href="#">Category</a><p>Rs 750</p></li>
+				<li><img src="images/s5.jpg" /><a href="#">Category</a><p>Rs 600</p></li>
+				<li><img src="images/s6.jpg" /><a href="#">Category</a><p>Rs 850</p></li>
+				<li><img src="images/s7.jpg" /><a href="#">Category</a><p>Rs 900</p></li>
+				<li><img src="images/s8.jpg" /><a href="#">Category</a><p>Rs 550</p></li>
+				<li><img src="images/s9.jpg" /><a href="#">Category</a><p>Rs 750</p></li>
 			 </ul>
 		<script type="text/javascript">
 			$(window).load(function() {
@@ -92,7 +94,7 @@
 			    
 			});
 		</script>
-		<script type="text/javascript" src="web/js/jquery.flexisel.js"></script>
+		<script type="text/javascript" src="js/jquery.flexisel.js"></script>
 	     </div>
 	     <div class="toogle">
 	     	<h3 class="m_3">Product Details</h3>
@@ -227,7 +229,7 @@
 								<li><a href="#"> <span class="color7"> </span><p class="red">Gray</p></a></li>
 						   </ul>
 			       </section>
-			       <script src="web/js/jquery.easydropdown.js"></script>
+			       <script src="js/jquery.easydropdown.js"></script>
 			      </div>
 			      <div class="clear"></div>
 				</div>

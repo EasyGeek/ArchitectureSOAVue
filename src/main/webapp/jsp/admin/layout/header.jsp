@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<link rel="stylesheet" href="http://localhost:8080/ArchitectureSOAVue/css/bootstrap.css">
+	<link rel="stylesheet" href="http://localhost:8080/ArchitectureSOAVue/css/backBootstrap.css">
 	<link rel="stylesheet" href="http://localhost:8080/ArchitectureSOAVue/css/backStyle.css">
 </head>
 <body>

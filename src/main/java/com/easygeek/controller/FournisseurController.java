@@ -19,7 +19,7 @@ public class FournisseurController {
 	@Autowired
 	FournisseurDao fournisseurDao;
 
-	@RequestMapping(value = "/admin/fournisseurs", method = RequestMethod.GET)
+	@RequestMapping(value = "admin/fournisseurs", method = RequestMethod.GET)
 	public ModelAndView getFournisseurs() {
 		mav.setViewName("admin/fournisseurs");
 
@@ -28,28 +28,30 @@ public class FournisseurController {
 
 		return mav;
 	}
-	
+
 	@RequestMapping(value = "/admin/fournisseurs/ajouter", method = RequestMethod.POST)
-	public ModelAndView ajouterFournisseurs(@ModelAttribute("fournisseur") Fournisseur fournisseur) {
+	public ModelAndView ajouterFournisseurs(
+			@ModelAttribute("fournisseur") Fournisseur fournisseur) {
 		fournisseurDao.sauvegarder(fournisseur);
 		getFournisseurs();
 		return mav;
 	}
-	
+
 	@RequestMapping(value = "/admin/fournisseurs/modifier", method = RequestMethod.POST)
-	public ModelAndView modifierFournisseurs(@ModelAttribute("fournisseur") Fournisseur fournisseur) {
+	public ModelAndView modifierFournisseurs(
+			@ModelAttribute("fournisseur") Fournisseur fournisseur) {
 		fournisseurDao.modifier(fournisseur);
 		getFournisseurs();
 		return mav;
 	}
-	
+
 	@RequestMapping(value = "/admin/fournisseurs/modifier/{id}", method = RequestMethod.POST)
 	public ModelAndView getFournisseurModifier(@PathVariable Integer id) {
 		mav.setViewName("admin/fournisseurmodif");
 		mav.addObject("fournisseur", fournisseurDao.get(id));
 		return mav;
 	}
-	
+
 	@RequestMapping(value = "/admin/fournisseurs/supprimer/{id}", method = RequestMethod.POST)
 	public ModelAndView supprimerFournisseurs(@PathVariable Integer id) {
 		fournisseurDao.supprimer(id);

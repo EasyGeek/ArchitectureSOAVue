@@ -19,13 +19,15 @@ public class FournisseurDaoImpl implements FournisseurDao {
 		
 		return responseEntity.getBody();
 	}
+	
+	
 
 	public void sauvegarder(Fournisseur fournisseur) {
 		restTemplate.postForLocation("http://localhost:8090/fournisseur/ajouter", fournisseur, Fournisseur.class);
 	}
 
 	public void modifier(Fournisseur fournisseur) {
-		restTemplate.put("http://localhost:8090/fournisseur/modifier", fournisseur, Fournisseur.class);
+		restTemplate.postForLocation("http://localhost:8090/fournisseur/modifier", fournisseur, Fournisseur.class);
 	}
 
 	public void supprimer(Integer id) {
@@ -33,9 +35,8 @@ public class FournisseurDaoImpl implements FournisseurDao {
 	}
 	
 	public Fournisseur get(Integer id) {
-		ResponseEntity<Fournisseur> fournisseur = restTemplate.getForEntity("http://localhost:8090/fournisseur/" + id, Fournisseur.class);
-		return fournisseur.getBody();
+		  ResponseEntity<Fournisseur> fournisseur = restTemplate.getForEntity("http://localhost:8090/fournisseur/" + id, Fournisseur.class);
+		  return fournisseur.getBody();
 	}
-	
 }
 

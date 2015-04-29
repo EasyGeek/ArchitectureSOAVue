@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+f<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	isELIgnored="false" pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -10,16 +10,18 @@
 <div class="content">
 	<div class="formulaire">
 		<table>
-			<form:form action="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/ajouter" method="POST" modelAttribute="fournisseur">
+			<form:form
+				action="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/ajouter"
+				method="POST" modelAttribute="fournisseur">
 				<tr>
-				  <td><form:input path="nom" placeholder="Nom" /></td>
-				  <td><form:input path="telephone" placeholder="Téléphone" /></td>
-				  <td><form:input path="adresse" placeholder="Adresse" /></td>
-				  <td><form:input path="codePostal" placeholder="Code postal" /></td>
-				  <td><form:input path="ville" placeholder="Ville" /></td>
-				  <td><input type="submit" value="Ajouter" /></td>
+					<th><form:input path="nom" placeholder="Nom" /></th>
+					<th><form:input path="telephone" placeholder="Téléphone" /></th>
+					<th><form:input path="adresse" placeholder="Adresse" /></th>
+					<th><form:input path="codePostal" placeholder="Code postal" /></th>
+					<th><form:input path="ville" placeholder="Ville" /></th>
+					<th><input type="submit" value="Ajouter" /></th>
 				</tr>
-	  		</form:form>
+			</form:form>
 		</table>
 	</div>
 </div>
@@ -28,37 +30,33 @@
 <div class="content">
 	<table class="table table-condensed table-bordered">
 		<tr id="tableTitle">
-			<td>Nom</td>
-			<td>Téléphone</td>
-			<td>Adresse</td>
-			<td>Ville</td>
-			<td>Code postal</td>
-			<td></td>
+			<th>Nom</th>
+			<th>Téléphone</th>
+			<th>Adresse</th>
+			<th>Ville</th>
+			<th>Code postal</th>
+			<th>Modifier</th>
+			<th>Supprimer</th>
 		</tr>
-			<c:forEach var="nomVariable" items="${fournisseurList}">
-				<tr>
-					<td>
-						<c:out value="${nomVariable.nom}" />
-					</td>
-					<td>
-						<c:out value="${nomVariable.telephone}" />
-					</td>
-					<td>
-						<c:out value="${nomVariable.adresse}" />
-					</td>
-					<td>
-						<c:out value="${nomVariable.ville}" /></td>
-					<td>
-						<c:out value="${nomVariable.codePostal}" />
-					</td>
-					<td>
-						<form:form action ="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/modifier/${nomVariable.fournisseurId}" method="POST"><input type="submit" value="Modifier" /></form:form>
-					</td>
-					<td>
-						<form:form action ="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/supprimer/${nomVariable.fournisseurId}" method="POST"><input type="submit" value="Supprimer" /></form:form>
-					</td>			
-					
-				</tr>
+		<c:forEach var="nomVariable" items="${fournisseurList}">
+			<tr>
+				<td><c:out value="${nomVariable.nom}" /></td>
+				<td><c:out value="${nomVariable.telephone}" /></td>
+				<td><c:out value="${nomVariable.adresse}" /></td>
+				<td><c:out value="${nomVariable.ville}" /></td>
+				<td><c:out value="${nomVariable.codePostal}" /></td>
+				<td><form:form
+						action="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/modifier/${nomVariable.fournisseurId}"
+						method="POST">
+						<input type="submit" value="Modifier" />
+					</form:form></td>
+				<td><form:form
+						action="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/supprimer/${nomVariable.fournisseurId}"
+						method="POST">
+						<input type="submit" value="Supprimer" />
+					</form:form></td>
+
+			</tr>
 		</c:forEach>
 	</table>
 </div>

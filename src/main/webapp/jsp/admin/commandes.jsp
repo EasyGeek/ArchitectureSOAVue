@@ -12,29 +12,26 @@
 <div class="content">
 	<table class="table table-condensed table-bordered">
 		<tr id="tableTitle">
-			<td>N° Commande</td>
-			<td>Client</td>
-			<td>Produit</td>
-			<td>Marque</td>
-			<td>Type</td>
-			<td>Promotion</td>
-			<td>Quantité</td>
-			<td>Date</td>
-			<td>Fournisseur</td>
+			<th>N° Commande</th>
+			<th>Client</th>
+			<th>Produit</th>
+			<th>Marque</th>
+			<th>Type</th>
+			<th>Promotion</th>
+			<th>Quantité</th>
+			<th>Date</th>
 		</tr>
 		<c:forEach var="commande" items="${detailsCommandeList}">
 		
 			<tr>
 				<td><c:out value="${commande.id}" /></td>
-				<td><c:out value="${commande.client.id}" /></td>
+				<td><c:out value="${commande.commande.client.nom}" /></td>
 				<td><c:out value="${commande.composant.nom}" /></td>
 				<td><c:out value="${commande.composant.marqueId.libelle}" /></td>
 				<td><c:out value="${commande.composant.typeId.libelle}" /></td>
 				<td><c:out value="${commande.composant.promotion}" /></td>
 				<td><c:out value="${commande.quantite}" /></td>
-				<td><c:out value="{commande.commande.dateCommande}" /></td>
-				<td><a href="http://localhost:8090/client/" >Modifier</a>
-				<td><form:form action ="http://localhost:8090/client/supprimer/${nomVariable.clientId}" method="DELETE"><input type="submit" value="Supprimer" /></form:form></td>			
+				<td><c:out value="${commande.commande.dateCommande}" /></td>
 			</tr>
 		</c:forEach>
 	</table>
