@@ -1,5 +1,7 @@
 package com.easygeek.dao;
 
+import org.springframework.http.ResponseEntity;
+
 import com.easygeek.entite.Fournisseur;
 
 public interface FournisseurDao {
@@ -12,6 +14,6 @@ public interface FournisseurDao {
 	
 	public void supprimer(Integer id);
 	
-	public void get(Integer id);
+	public ResponseEntity<Fournisseur> get(Integer id);
 	
 }

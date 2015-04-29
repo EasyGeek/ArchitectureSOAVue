@@ -10,29 +10,13 @@
 <div class="content">
 	<div class="formulaire">
 		<table>
-			<tr>
-				<td>
-					<c:out value="${nomVariable.nom}" />
-				</td>
-				<td>
-					<c:out value="${nomVariable.telephone}" />
-				</td>
-				<td>
-					<c:out value="${nomVariable.adresse}" />
-				</td>
-				<td>
-					<c:out value="${nomVariable.ville}" /></td>
-				<td>
-					<c:out value="${nomVariable.codePostal}" />
-				</td>
-			</tr>
 			<form:form action="http://localhost:8080/ArchitectureSOAVue/admin/fournisseurs/modifier" method="POST" modelAttribute="fournisseur">
 			<tr>
-			  <td><form:input path="nom" placeholder="Nom" /></td>
-			  <td><form:input path="telephone" placeholder="Téléphone" /></td>
-			  <td><form:input path="adresse" placeholder="Adresse" /></td>
-			  <td><form:input path="codePostal" placeholder="Code postal" /></td>
-			  <td><form:input path="ville" placeholder="Ville" /></td>
+			  <td><form:input path="nom" placeholder="Nom" value="${fournisseur.nom}" /></td>
+			  <td><form:input path="telephone" placeholder="Téléphone" value="${fournisseur.telephone}" /></td>
+			  <td><form:input path="adresse" placeholder="Adresse" value="${fournisseur.adresse}" /></td>
+			  <td><form:input path="codePostal" placeholder="Code postal" value="${fournisseur.codePostal}" /></td>
+			  <td><form:input path="ville" placeholder="Ville" value="${fournisseur.ville}" /></td>
 			  <td><input type="submit" value="Ajouter" /></td>
 			</tr>
 	  		</form:form>
