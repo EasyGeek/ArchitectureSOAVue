@@ -16,5 +16,5 @@ public interface ComposantDao {
 	
 	public Type[] getType();
 	
-	public Composant[] getComposant(Integer id);
+	public Composant getComposant(Integer id);
 }

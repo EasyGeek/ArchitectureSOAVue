@@ -25,9 +25,9 @@
 		         </div>
 				<div class="f-list2">
 				 <ul>
-					<li class="active"><a href="nous">A propos</a></li> |
-					<li><a href="condition">Conditions d'utilisation</a></li> |
-					<li><a href="contact">Contactez nous</a></li> 
+					<li class="active"><a href="http://localhost:8080/ArchitectureSOAVue/nous">A propos</a></li> |
+					<li><a href="http://localhost:8080/ArchitectureSOAVue/condition">Conditions d'utilisation</a></li> |
+					<li><a href="http://localhost:8080/ArchitectureSOAVue/contact">Contactez nous</a></li> 
 				 </ul>
 			    </div>
 			    <div class="clear"></div>

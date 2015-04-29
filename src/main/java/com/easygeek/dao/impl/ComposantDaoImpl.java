@@ -52,10 +52,10 @@ public class ComposantDaoImpl implements ComposantDao {
 		return responseEntity.getBody();
 	}
 
-	public Composant[] getComposant(Integer id) {
-		ResponseEntity<Composant[]> responseEntity = restTemplate
+	public Composant getComposant(Integer id) {
+		ResponseEntity<Composant> responseEntity = restTemplate
 				.getForEntity("http://localhost:8090/catalogue/" + id,
-						Composant[].class);
+						Composant.class);
 
 		return responseEntity.getBody();
 	}
