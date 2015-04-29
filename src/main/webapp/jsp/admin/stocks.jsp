@@ -22,8 +22,8 @@
 			<tr>
 				<td><c:out value="${nomVariable.reapprovisionnement}" /></td>
 				<td><c:out value="${nomVariable.composant.nom}" /></td>
-				<td><c:out value="${nomVariable.marqueId }" /></td>
-				<td><c:out value="${nomVariable.typeId }" /></td>
+				<td><c:out value="${nomVariable.composant.marqueId }" /></td>
+				<td><c:out value="${nomVariable.composant.typeId }" /></td>
 				<td><c:out value="${nomVariable.quantite}" /></td>
 				<td><c:out value="${nomVariable.fournisseur.nom}" /></td>
 				<td><c:out value="${nomVariable.date}" /></td>
