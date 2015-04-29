@@ -1,3 +1,4 @@
+<jsp:include page="../header.jsp"/>
 <div class="register_account">
           	<div class="wrap">
     	      <h4 class="title">Create an Account</h4>
@@ -219,5 +220,4 @@
 		    </form>
     	</div>
     </div>
-</body>
-</html>
+<jsp:include page="../footer.jsp"/>
