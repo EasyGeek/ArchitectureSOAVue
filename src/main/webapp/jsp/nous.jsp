@@ -1,3 +1,4 @@
+<jsp:include page="header.jsp"/>
 <div class="login">
           <div class="wrap">
 				<div class="section group">
@@ -77,5 +78,4 @@
 		  </div>
 	</div>	
    </div> 
-</body>
-</html>
+<jsp:include page="footer.jsp"/>

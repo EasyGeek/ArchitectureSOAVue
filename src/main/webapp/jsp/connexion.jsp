@@ -1,3 +1,4 @@
+<jsp:include page="header.jsp"/>
 <div class="login">
           	<div class="wrap">
 				<div class="col_1_of_login span_1_of_login">
@@ -36,5 +37,4 @@
 				<div class="clear"></div>
 			</div>
 		</div>
-</body>
-</html>
+<jsp:include page="footer.jsp"/>
