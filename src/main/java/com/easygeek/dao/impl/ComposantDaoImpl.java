@@ -6,6 +6,8 @@ import org.springframework.web.client.RestTemplate;
 
 import com.easygeek.dao.ComposantDao;
 import com.easygeek.entite.Composant;
+import com.easygeek.entite.Marque;
+import com.easygeek.entite.Type;
 
 @Repository
 public class ComposantDaoImpl implements ComposantDao {
@@ -18,7 +20,7 @@ public class ComposantDaoImpl implements ComposantDao {
 
 		return responseEntity.getBody();
 	}
-
+	
 	public Composant[] getByMarque(Integer id) {
 		ResponseEntity<Composant[]> responseEntity = restTemplate.getForEntity(
 				"http://localhost:8090/catalogue/marque/" + id,
@@ -26,10 +28,26 @@ public class ComposantDaoImpl implements ComposantDao {
 
 		return responseEntity.getBody();
 	}
-
+	
 	public Composant[] getAll() {
 		ResponseEntity<Composant[]> responseEntity = restTemplate.getForEntity(
 				"http://localhost:8090/catalogue/", Composant[].class);
+
+		return responseEntity.getBody();
+	}
+
+	public Marque[] getMarque() {
+		ResponseEntity<Marque[]> responseEntity = restTemplate.getForEntity(
+				"http://localhost:8090/catalogue/marque/",
+				Marque[].class);
+
+		return responseEntity.getBody();
+	}
+
+	public Type[] getType() {
+		ResponseEntity<Type[]> responseEntity = restTemplate.getForEntity(
+				"http://localhost:8090/catalogue/type/",
+				Type[].class);
 
 		return responseEntity.getBody();
 	}
