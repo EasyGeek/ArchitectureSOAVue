@@ -1,9 +1,5 @@
 package com.easygeek.entite;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
-
 public class Composant implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -14,8 +10,8 @@ public class Composant implements java.io.Serializable {
 	private Double pourcentageMarge;
 	private String image;
 	private Double promotion;
-	private Integer marqueId;
-	private Integer typeId;
+	private Marque marque;
+	private Type type;
 
 	public Composant() {
 	}
@@ -26,7 +22,7 @@ public class Composant implements java.io.Serializable {
 
 	public Composant(String reference, String nom, String description,
 			Double prixHt, Double pourcentageMarge, String image,
-			Double promotion, Integer marqueId, Integer typeId) {
+			Double promotion, Marque marqueId, Type typeId) {
 		this.reference = reference;
 		this.nom = nom;
 		this.description = description;
@@ -34,8 +30,8 @@ public class Composant implements java.io.Serializable {
 		this.pourcentageMarge = pourcentageMarge;
 		this.image = image;
 		this.promotion = promotion;
-		this.marqueId = marqueId;
-		this.typeId = typeId;
+		this.marque = marqueId;
+		this.type = typeId;
 	}
 
 	public String getReference() {
@@ -94,20 +90,20 @@ public class Composant implements java.io.Serializable {
 		this.promotion = promotion;
 	}
 
-	public Integer getMarqueId() {
-		return this.marqueId;
+	public Marque getMarqueId() {
+		return this.marque;
 	}
 
-	public void setMarqueId(Integer marqueId) {
-		this.marqueId = marqueId;
+	public void setMarqueId(Marque marqueId) {
+		this.marque = marqueId;
 	}
 
-	public Integer getTypeId() {
-		return this.typeId;
+	public Type getTypeId() {
+		return this.type;
 	}
 
-	public void setTypeId(Integer typeId) {
-		this.typeId = typeId;
+	public void setTypeId(Type typeId) {
+		this.type = typeId;
 	}
 
 }
