@@ -36,7 +36,7 @@
 								<input type="submit" value="Acheter">
 							</form>
 						</div>
-						<span class="m_link"><a href="#">Connectez-vous pour ajouter à votre panier !</a> </span>
+						<span class="m_link"><a href="http://localhost:8080/ArchitectureSOAVue/connexion">Connectez-vous pour ajouter à votre panier !</a> </span>
 						<p class="m_text2">
 							<c:out value="${composant.description}" />
 						</p>

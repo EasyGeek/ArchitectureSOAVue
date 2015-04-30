@@ -91,7 +91,7 @@
                 <img src="images/t-img3.jpg"  alt="" />
               </div>
              </div>
-              <div class="btn"><a href="single.html">Check it Out</a></div>
+              <div class="btn"><a href="#">Check it Out</a></div>
              </div>
 	    </div>
 	   <div class="clear"></div>

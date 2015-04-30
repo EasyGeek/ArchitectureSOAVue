@@ -5,7 +5,7 @@
 					<h4 class="title">Vous êtes nouveau ?</h4>
 					<p>Inscrivez-vous gratuitement et rapidement. Une fois inscrit, vous pourrez avoir un suivi de vos commandes et accéder à tout le contenu de l'application.</p>
 					<div class="button1">
-					   <a href="register.html"><input type="submit" name="Submit" value="S'inscrire"></a>
+					   <a href="http://localhost:8080/ArchitectureSOAVue/register"><input type="submit" name="Submit" value="S'inscrire"></a>
 					 </div>
 					 <div class="clear"></div>
 				</div>
@@ -13,7 +13,7 @@
 				<div class="login-title">
 	           		<h4 class="title">Connexion</h4>
 					<div id="loginbox" class="loginbox">
-						<form action="" method="post" name="login" id="login-form">
+						<form action="http://localhost:8080/ArchitectureSOAVue/connexion" method="post" name="login" id="login-form">
 						  <fieldset class="input">
 						    <p id="login-form-username">
 						      <label for="modlgn_username">Adresse email</label>
