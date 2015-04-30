@@ -15,7 +15,7 @@ public class ComposantDaoImpl implements ComposantDao {
 
 	public Composant[] getByType(Integer id) {
 		ResponseEntity<Composant[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8081/catalogue/type/" + id,
+				.getForEntity("http://localhost:8090/catalogue/type/" + id,
 						Composant[].class);
 
 		return responseEntity.getBody();
@@ -23,7 +23,7 @@ public class ComposantDaoImpl implements ComposantDao {
 	
 	public Composant[] getByMarque(Integer id) {
 		ResponseEntity<Composant[]> responseEntity = restTemplate.getForEntity(
-				"http://localhost:8081/catalogue/marque/" + id,
+				"http://localhost:8090/catalogue/marque/" + id,
 				Composant[].class);
 
 		return responseEntity.getBody();
@@ -31,14 +31,14 @@ public class ComposantDaoImpl implements ComposantDao {
 	
 	public Composant[] getAll() {
 		ResponseEntity<Composant[]> responseEntity = restTemplate.getForEntity(
-				"http://localhost:8081/catalogue/", Composant[].class);
+				"http://localhost:8090/catalogue/", Composant[].class);
 
 		return responseEntity.getBody();
 	}
 
 	public Marque[] getMarque() {
 		ResponseEntity<Marque[]> responseEntity = restTemplate.getForEntity(
-				"http://localhost:8081/catalogue/marque/",
+				"http://localhost:8090/catalogue/marque/",
 				Marque[].class);
 
 		return responseEntity.getBody();
@@ -46,7 +46,7 @@ public class ComposantDaoImpl implements ComposantDao {
 
 	public Type[] getType() {
 		ResponseEntity<Type[]> responseEntity = restTemplate.getForEntity(
-				"http://localhost:8081/catalogue/type/",
+				"http://localhost:8090/catalogue/type/",
 				Type[].class);
 
 		return responseEntity.getBody();
