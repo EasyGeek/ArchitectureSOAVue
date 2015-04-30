@@ -8,10 +8,6 @@
 	<div class="mens">
 		<div class="main">
 			<div class="wrap">
-				<ul class="breadcrumb breadcrumb__t">
-					<a class="home" href="#">Home</a> /
-					<a href="#">Dolor sit amet</a> / Lorem ipsum dolor sit amet
-				</ul>
 				<div class="cont span_2_of_3">
 					<div class="grid images_3_of_2">
 						<div id="container">
@@ -34,12 +30,10 @@
 						</h3>
 						<p class="m_5">
 							<c:out value="${composant.prixHt}" />&euro;
-							<span class="reducedfrom"><c:out
-									value="${composant.promotion}" /></span> <a href="#">click for offer</a>
 						</p>
 						<div class="btn_form">
 							<form>
-								<input type="submit" value="buy" title="">
+								<input type="submit" value="Acheter" title="">
 							</form>
 						</div>
 						<span class="m_link"><a href="#">login to save in
@@ -52,15 +46,15 @@
 					<div class="clients">
 						<h3 class="m_3">10 autres produits de la même catégorie</h3>
 						<ul id="flexiselDemo3">
-							<li><img src="images/s5.jpg" /><a href="#">Category</a>
+							<li><img src="http://localhost:8080/ArchitectureSOAVue/images/s5.jpg" /><a href="#">Category</a>
 							<p>Rs 600</p></li>
-							<li><img src="images/s6.jpg" /><a href="#">Category</a>
+							<li><img src="http://localhost:8080/ArchitectureSOAVue/images/s6.jpg" /><a href="#">Category</a>
 							<p>Rs 850</p></li>
-							<li><img src="images/s7.jpg" /><a href="#">Category</a>
+							<li><img src="http://localhost:8080/ArchitectureSOAVue/images/s7.jpg" /><a href="#">Category</a>
 							<p>Rs 900</p></li>
-							<li><img src="images/s8.jpg" /><a href="#">Category</a>
+							<li><img src="http://localhost:8080/ArchitectureSOAVue/images/s8.jpg" /><a href="#">Category</a>
 							<p>Rs 550</p></li>
-							<li><img src="images/s9.jpg" /><a href="#">Category</a>
+							<li><img src="http://localhost:8080/ArchitectureSOAVue/images/s9.jpg" /><a href="#">Category</a>
 							<p>Rs 750</p></li>
 						</ul>
 						<script type="text/javascript">
@@ -109,7 +103,7 @@
 
 							});
 						</script>
-						<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+						<script type="text/javascript" src="http://localhost:8080/ArchitectureSOAVue/js/jquery.flexisel.js"></script>
 					</div>
 				</div>
 				<div class="clear"></div>

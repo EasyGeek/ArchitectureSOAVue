@@ -41,6 +41,7 @@ public class IndexController{
 
 		return mav;
 	}
+	
 	@RequestMapping(value = "/article/{id}", method = RequestMethod.GET)
 	public ModelAndView article(@PathVariable Integer id) {
 		mav.setViewName("article");

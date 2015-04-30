@@ -16,7 +16,7 @@
 								<option value="">Position</option>
 								<option value="">Name</option>
 								<option value="">Price</option>
-							</select> <a href=""><img src="images/arrow2.gif" alt=""
+							</select> <a href=""><img src="http://localhost:8080/ArchitectureSOAVue/images/arrow2.gif" alt=""
 								class="v-middle"></a>
 						</div>
 					</div>
@@ -43,7 +43,7 @@
 					<a href="article/${type.reference}">
 					<div class="inner_content clearfix">
 					<div class="product_image">
-						<img src="images/${type.image}" alt=""/>
+						<img src="http://localhost:8080/ArchitectureSOAVue/images/${type.image}" alt=""/>
 					</div>
 					 <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
                     <div class="price">

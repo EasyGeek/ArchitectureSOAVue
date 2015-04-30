@@ -908,7 +908,7 @@ p.title a:hover{
 }
 .cart-right {
 	float: right;
-	background: url(../images/cart2.png)2px 0px #7db122;
+	background: url(../images/cart2.png)2px 0px #951717;
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
@@ -930,7 +930,7 @@ p.title a:hover{
 	margin-top:10px;
 }
 span.actual{
-	color:#7db122;
+	color:#951717;
 	font-size:1em;
 }
 span.reducedfrom {
