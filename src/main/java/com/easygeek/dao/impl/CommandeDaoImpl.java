@@ -13,7 +13,7 @@ public class CommandeDaoImpl implements CommandeDao {
 	public Commande[] getAll(){
 		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<Commande[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8081/commande",
+				.getForEntity("http://localhost:8090/commande",
 						Commande[].class);
 		
 		return responseEntity.getBody();

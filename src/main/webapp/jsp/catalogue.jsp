@@ -59,7 +59,6 @@
 					</div>
 					</c:forEach>
 					<div class="clear"></div>
-					
 				</div>
 			</div>
 			<div class="rsidebar span_1_of_left">

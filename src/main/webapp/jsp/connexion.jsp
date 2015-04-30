@@ -27,7 +27,7 @@
 							    <p id="login-form-remember">
 							      <label for="modlgn_remember"><a href="#">Mot de passe oublié ? </a></label>
 							   </p>
-							    <input type="submit" name="Submit" class="button" value="Login"><div class="clear"></div>
+							    <input type="submit" name="Submit" class="button" value="Se connecter"><div class="clear"></div>
 							 </div>
 						  </fieldset>
 						 </form>

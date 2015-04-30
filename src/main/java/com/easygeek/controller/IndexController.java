@@ -51,7 +51,7 @@ public class IndexController{
 		mav.addObject("composant", composantDao.getComposant(id));
 		return mav;
 	}
-	@RequestMapping(value = "/conditions", method = RequestMethod.GET)
+	@RequestMapping(value = "/condition", method = RequestMethod.GET)
 	public ModelAndView conditions() {
 		mav.setViewName("conditions");
 		mav.addObject("typeList", composantDao.getType());

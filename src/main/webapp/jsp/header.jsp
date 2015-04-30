@@ -52,46 +52,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="menu">
 	            	<ul class="megamenu skyblue">
 						<li class="active grid"><a href="http://localhost:8080/ArchitectureSOAVue/index">Accueil</a></li>
-						<li><a class="color4" href="http://localhost:8080/ArchitectureSOAVue/catalogue">Composants PC</a>
-							<div class="megapanel">
-								<div class="row">
-									<div class="col1">
-										<div class="h_nav">
-											<h4>Contact Lenses</h4>
-											<ul>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Daily-wear soft lenses</a></li>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Extended-wear</a></li>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Lorem ipsum </a></li>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Planned replacement</a></li>
-											</ul>	
-										</div>							
-									</div>
-									<div class="col1">
-										<div class="h_nav">
-											<h4>Sun Glasses</h4>
-											<ul>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Heart-Shaped</a></li>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Square-Shaped</a></li>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Round-Shaped</a></li>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Oval-Shaped</a></li>
-											</ul>	
-										</div>							
-									</div>
-									<div class="col1">
-										<div class="h_nav">
-											<h4>Eye Glasses</h4>
-											<ul>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Anti Reflective</a></li>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Aspheric</a></li>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Bifocal</a></li>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Hi-index</a></li>
-												<li><a href="http://localhost:8080/ArchitectureSOAVue/womens.html">Progressive</a></li>
-											</ul>	
-										</div>												
-									</div>
-								</div>
-							</div>
-						</li>		
 						<c:forEach var="type" items="${typeList}">
 						<li><a class="color6" href="http://localhost:8080/ArchitectureSOAVue/catalogue/${type.typeId}"><c:out value="${type.libelle}" /></a></li>
 						</c:forEach>
@@ -100,7 +60,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 	   		<div class="header-bottom-right">
          		<div class="search">	  
-					<input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+					<input type="text" name="s" class="textbox" value="Rechercher..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
 					<input type="submit" value="Subscribe" id="submit" name="submit">
 					<div id="response"> </div>
 		 		</div>
