@@ -9,6 +9,8 @@ import com.easygeek.entite.Client;
 
 @Repository
 public class ClientDaoImpl implements ClientDao {
+	
+	RestTemplate restTemplate = new RestTemplate();
 
 	public Client[] getAll(){
 		RestTemplate restTemplate = new RestTemplate();
@@ -17,5 +19,9 @@ public class ClientDaoImpl implements ClientDao {
 						Client[].class);
 		
 		return responseEntity.getBody();
+	}
+	
+	public void sauvegarder(Client client) {
+		restTemplate.postForLocation("http://localhost:8090/client/ajouter", client, Client.class);
 	}
 }
