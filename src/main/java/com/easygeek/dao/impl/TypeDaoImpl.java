@@ -14,7 +14,7 @@ public class TypeDaoImpl implements TypeDao {
 	public Type[] getAll() {
 
 		ResponseEntity<Type[]> responseEntity = restTemplate.getForEntity(
-				"http://localhost:8081/catalogue/type", Type[].class);
+				"http://localhost:8090/catalogue/type", Type[].class);
 
 		return responseEntity.getBody();
 	}

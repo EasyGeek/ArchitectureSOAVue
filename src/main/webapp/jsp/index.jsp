@@ -51,7 +51,7 @@
 			<div class="top-box">
 				<c:forEach var="type" items="${composantList}"  begin="0" end="8">
 				<div class="col_1_of_3 span_1_of_3">
-					<a href="article">
+					<a href="article/${type.reference}">
 					<div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="images/${type.image}" alt=""/>
@@ -93,17 +93,6 @@
              </div>
               <div class="btn"><a href="single.html">Check it Out</a></div>
              </div>
-           <div class="top-border"> </div>
-			<div class="sidebar-bottom">
-			    <h2 class="m_1">Newsletters<br> Signup</h2>
-			    <p class="m_text">Lorem ipsum dolor sit amet, consectetuer</p>
-			    <div class="subscribe">
-					 <form>
-					    <input name="userName" type="text" class="textbox">
-					    <input type="submit" value="Subscribe">
-					 </form>
-	  			</div>
-			</div>
 	    </div>
 	   <div class="clear"></div>
 	</div>
