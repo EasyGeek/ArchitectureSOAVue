@@ -819,9 +819,11 @@ ul.last li a:hover{
 	-webkit-box-shadow:0 0 5px #aaa;
 	-moz-box-shadow:0 0 5px #aaa;
 	-o-box-shadow:0 0 5px #aaa;
+	height: 480px;
+	width: 365px;
 }
 .span_1_of_3:hover{
-	background:#4CB1CA;
+	background:#951717;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
@@ -838,7 +840,7 @@ ul.last li a:hover{
 .span_1_of_3:hover span.reducedfrom {
 	color: #FFF;
 }
-.col_1_of_3:first-child { margin-left: 0; }
+.col_1_of_3:first-child, .col_1_of_3:nth-child(4), .col_1_of_3:nth-child(7) { margin-left: 0; }
 h2.head{
 	font-size: 1.7em;
 	text-transform: uppercase;
@@ -873,7 +875,7 @@ h2.head{
 	background: #CB3D27;
 }
 .sale-box span.on_sale {
-	background:#4cb1ca;
+	background:#951717;
 	color: #FFF;
 	display: block;
 	left: -9px;
@@ -890,7 +892,7 @@ h2.head{
 	width: 140px;
 	z-index: 2;
 	text-transform:uppercase;
-	border-bottom: 2px solid #2892AC;
+	border-bottom: 2px solid #951716;
 }
 .cart-left{
 	width:73.5%;
@@ -906,7 +908,7 @@ p.title a:hover{
 }
 .cart-right {
 	float: right;
-	background: url(../images/cart2.png)2px 0px #7db122;
+	background: url(../images/cart2.png)2px 0px #951717;
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
@@ -928,7 +930,7 @@ p.title a:hover{
 	margin-top:10px;
 }
 span.actual{
-	color:#7db122;
+	color:#951717;
 	font-size:1em;
 }
 span.reducedfrom {
