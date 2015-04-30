@@ -6,4 +6,6 @@ public interface ClientDao {
 
 	public Client[] getAll();
 	
+	public void sauvegarder(Client client);
+	
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.easygeek.dao.ComposantDao;
+import com.easygeek.entite.Client;
 
 @Controller
 public class IndexController{
@@ -71,10 +72,10 @@ public class IndexController{
 
 		return mav;
 	}
-	@RequestMapping(value = "/inscription", method = RequestMethod.GET)
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public ModelAndView inscription() {
-		mav.setViewName("inscription");
-		mav.addObject("typeList", composantDao.getType());
+		mav.addObject("client", new Client());
+		mav.setViewName("register");
 
 		return mav;
 	}
