@@ -37,6 +37,7 @@ public class IndexController{
 	public ModelAndView categorie(@PathVariable Integer id) {
 		mav.setViewName("categorie");
 		mav.addObject("typeList", composantDao.getType());
+		mav.addObject("marqueList", composantDao.getMarque());
 		mav.addObject("composantList", composantDao.getByType(id));
 
 		return mav;
@@ -73,13 +74,6 @@ public class IndexController{
 	@RequestMapping(value = "/inscription", method = RequestMethod.GET)
 	public ModelAndView inscription() {
 		mav.setViewName("inscription");
-		mav.addObject("typeList", composantDao.getType());
-
-		return mav;
-	}
-	@RequestMapping(value = "/nous", method = RequestMethod.GET)
-	public ModelAndView nous() {
-		mav.setViewName("nous");
 		mav.addObject("typeList", composantDao.getType());
 
 		return mav;

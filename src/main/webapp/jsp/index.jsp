@@ -16,11 +16,11 @@
                 <div class="slide_content">
                     <div class="slide_content_wrap">
                         <!-- Text title -->
-                        <h4 class="title">Aluminium Club</h4>
+                        <h4 class="title">Clavier gaming</h4>
                         <!-- /Text title -->
                         
                         <!-- Text description -->
-                        <p class="description">Experiance ray ban</p>
+                        <p class="description">Expérience Razer</p>
                         <!-- /Text description -->
                     </div>
                 </div>
@@ -31,8 +31,8 @@
                 <img src="images/banner1.jpg" alt=""/>
                 <div class="slide_content">
                     <div class="slide_content_wrap">
-                        <h4 class="title">consectetuer adipiscing </h4>
-                        <p class="description">diam nonummy nibh euismod</p>
+                        <h4 class="title">Carte mère gaming</h4>
+                        <p class="description">Nouveauté incontournable</p>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
 			<div class="top-box">
 				<c:forEach var="type" items="${composantList}"  begin="0" end="8">
 				<div class="col_1_of_3 span_1_of_3">
-					<a href="article/${type.reference}">
+					<a href="http://localhost:8080/ArchitectureSOAVue/article/${type.reference}">
 					<div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="images/${type.image}" alt=""/>

@@ -13,7 +13,7 @@ public class ClientDaoImpl implements ClientDao {
 	public Client[] getAll(){
 		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<Client[]> responseEntity = restTemplate
-				.getForEntity("http://localhost:8090/client",
+				.getForEntity("http://localhost:8081/client",
 						Client[].class);
 		
 		return responseEntity.getBody();

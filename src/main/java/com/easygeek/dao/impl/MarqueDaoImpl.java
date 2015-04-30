@@ -11,7 +11,7 @@ public class MarqueDaoImpl {
 	public Marque[] getAll() {
 
 		ResponseEntity<Marque[]> responseEntity = restTemplate.getForEntity(
-				"http://localhost:8090/catalogue/marque", Marque[].class);
+				"http://localhost:8081/catalogue/marque", Marque[].class);
 
 		return responseEntity.getBody();
 	}

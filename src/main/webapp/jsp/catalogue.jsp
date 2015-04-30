@@ -12,26 +12,24 @@
 				<div class="mens-toolbar">
 					<div class="sort">
 						<div class="sort-by">
-							<label>Sort By</label> <select>
-								<option value="">Position</option>
-								<option value="">Name</option>
-								<option value="">Price</option>
+							<label>Trier par</label> <select>
+								<option value="">Nom</option>
+								<option value="">Prix</option>
 							</select> <a href=""><img src="http://localhost:8080/ArchitectureSOAVue/images/arrow2.gif" alt=""
 								class="v-middle"></a>
 						</div>
 					</div>
 					<div class="pager">
 						<div class="limiter visible-desktop">
-							<label>Show</label> <select>
-								<option value="" selected="selected">9</option>
+							<label>Montrer</label> <select>
+								<option value="" selected="selected">10</option>
 								<option value="">15</option>
 								<option value="">30</option>
-							</select> per page
+							</select> par page
 						</div>
 						<ul class="dc_pagination dc_paginationA dc_paginationA06">
 							<li><a href="#" class="previous">Pages</a></li>
 							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
 						</ul>
 						<div class="clear"></div>
 					</div>
@@ -40,7 +38,7 @@
 		<div class="top-box">
 				<c:forEach var="type" items="${composantList}">
 				<div class="col_1_of_3 span_1_of_3">
-					<a href="article/${type.reference}">
+					<a href="http://localhost:8080/ArchitectureSOAVue/article/${type.reference}">
 					<div class="inner_content clearfix">
 					<div class="product_image">
 						<img src="http://localhost:8080/ArchitectureSOAVue/images/${type.image}" alt=""/>
@@ -65,9 +63,16 @@
 				</div>
 			</div>
 			<div class="rsidebar span_1_of_left">
-				<h5 class="m_1">Categories</h5>
 				<section class="sky-form">
-					<h4>Filtrez par marque</h4>
+					<h4>Categories</h4>
+					<ul class="color-list">
+						<c:forEach var="type" items="${typeList}">
+							<li><a class="color6"
+									href="http://localhost:8080/ArchitectureSOAVue/catalogue/type/${type.typeId}"><c:out
+									value="${type.libelle}" /></a></li>
+						</c:forEach>
+					</ul>
+					<h4>Marques</h4>
 					<ul class="color-list">
 					<c:forEach var="marque" items="${marqueList}">
 						<li><a class="color6"

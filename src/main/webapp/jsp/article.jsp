@@ -33,79 +33,16 @@
 						</p>
 						<div class="btn_form">
 							<form>
-								<input type="submit" value="Acheter" title="">
+								<input type="submit" value="Acheter">
 							</form>
 						</div>
-						<span class="m_link"><a href="#">login to save in
-								wishlist</a> </span>
+						<span class="m_link"><a href="#">Connectez-vous pour ajouter à votre panier !</a> </span>
 						<p class="m_text2">
 							<c:out value="${composant.description}" />
 						</p>
 					</div>
 					<div class="clear"></div>
-					<div class="clients">
-						<h3 class="m_3">10 autres produits de la même catégorie</h3>
-						<ul id="flexiselDemo3">
-							<li><img src="http://localhost:8080/ArchitectureSOAVue/images/s5.jpg" /><a href="#">Category</a>
-							<p>Rs 600</p></li>
-							<li><img src="http://localhost:8080/ArchitectureSOAVue/images/s6.jpg" /><a href="#">Category</a>
-							<p>Rs 850</p></li>
-							<li><img src="http://localhost:8080/ArchitectureSOAVue/images/s7.jpg" /><a href="#">Category</a>
-							<p>Rs 900</p></li>
-							<li><img src="http://localhost:8080/ArchitectureSOAVue/images/s8.jpg" /><a href="#">Category</a>
-							<p>Rs 550</p></li>
-							<li><img src="http://localhost:8080/ArchitectureSOAVue/images/s9.jpg" /><a href="#">Category</a>
-							<p>Rs 750</p></li>
-						</ul>
-						<script type="text/javascript">
-							$(window).load(function() {
-								$("#flexiselDemo1").flexisel();
-								$("#flexiselDemo2").flexisel({
-									enableResponsiveBreakpoints : true,
-									responsiveBreakpoints : {
-										portrait : {
-											changePoint : 480,
-											visibleItems : 1
-										},
-										landscape : {
-											changePoint : 640,
-											visibleItems : 2
-										},
-										tablet : {
-											changePoint : 768,
-											visibleItems : 3
-										}
-									}
-								});
-
-								$("#flexiselDemo3").flexisel({
-									visibleItems : 5,
-									animationSpeed : 1000,
-									autoPlay : true,
-									autoPlaySpeed : 3000,
-									pauseOnHover : true,
-									enableResponsiveBreakpoints : true,
-									responsiveBreakpoints : {
-										portrait : {
-											changePoint : 480,
-											visibleItems : 1
-										},
-										landscape : {
-											changePoint : 640,
-											visibleItems : 2
-										},
-										tablet : {
-											changePoint : 768,
-											visibleItems : 3
-										}
-									}
-								});
-
-							});
-						</script>
-						<script type="text/javascript" src="http://localhost:8080/ArchitectureSOAVue/js/jquery.flexisel.js"></script>
 					</div>
-				</div>
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>

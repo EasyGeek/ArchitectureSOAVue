@@ -34,7 +34,10 @@ public class CatalogueController {
 	@RequestMapping(value = "/catalogue/{id}", method = RequestMethod.GET)
 	public ModelAndView getCatalogueComposant(@PathVariable Integer id) {
 		mav.setViewName("catalogue");
-		mav.addObject("composantElement", composantDao.getComposant(id));
+//		mav.addObject("composantElement", composantDao.getComposant(id));
+		mav.addObject("typeList", composantDao.getType());
+		mav.addObject("marqueList", composantDao.getMarque());
+		mav.addObject("composantList", composantDao.getByType(id));
 		return mav;
 	}
 	@RequestMapping(value = "/catalogue/marque/{id}", method = RequestMethod.GET)
