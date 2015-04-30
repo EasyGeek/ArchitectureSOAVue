@@ -52,7 +52,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="menu">
 	            	<ul class="megamenu skyblue">
 						<li class="active grid"><a href="http://localhost:8080/ArchitectureSOAVue/index">Accueil</a></li>
-						<li><a class="color4" href="http://localhost:8080/ArchitectureSOAVue/categorie">Composants PC</a>
+						<li><a class="color4" href="http://localhost:8080/ArchitectureSOAVue/catalogue">Composants PC</a>
 							<div class="megapanel">
 								<div class="row">
 									<div class="col1">
@@ -93,7 +93,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</li>		
 						<c:forEach var="type" items="${typeList}">
-						<li><a class="color6" href="http://localhost:8080/ArchitectureSOAVue/categorie/${type.typeId}"><c:out value="${type.libelle}" /></a></li>
+						<li><a class="color6" href="http://localhost:8080/ArchitectureSOAVue/catalogue/${type.typeId}"><c:out value="${type.libelle}" /></a></li>
 						</c:forEach>
 					</ul>
 				</div>
